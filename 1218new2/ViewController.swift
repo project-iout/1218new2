@@ -46,6 +46,27 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
        
     }
     
+    func collectionView(_ collectionView: UICollectionView, shouldSelectItemAt indexPath: IndexPath) -> Bool {
+        print(indexPath)
+        print(indexPath.section)
+        
+        switch indexPath.section{
+        case 0:
+            print("This item is in the first row")
+            
+        case 1:
+            print("This item is in the second row")
+            
+        case 2:
+            print("This item is in the third row")
+            
+        default:
+            print("This is wrong")
+        }
+        return true
+        }
+    
+    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         switch indexPath.section {
         case 0:
