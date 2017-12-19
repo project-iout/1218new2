@@ -74,6 +74,11 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
             default:
                 header?.titleLebel.text = "沒有設定"
             }
+            
+            
+            
+            //test
+            
            
 //            header?.backgroundColor = .yellow
             header?.titleLebel.textColor = .black
