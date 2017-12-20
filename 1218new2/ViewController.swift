@@ -40,33 +40,12 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
                 cell.myCellSize = .zero
             }
              return cell
-        }
-       
-        return UICollectionViewCell(frame: .zero)
-       
+            }
+            return UICollectionViewCell(frame: .zero)
     }
     
-    func collectionView(_ collectionView: UICollectionView, shouldSelectItemAt indexPath: IndexPath) -> Bool {
-        print(indexPath)
-        print(indexPath.section)
-        
-        switch indexPath.section{
-        case 0:
-            print("This item is in the first row")
-            
-        case 1:
-            print("This item is in the second row")
-            
-        case 2:
-            print("This item is in the third row")
-            
-        default:
-            print("This is wrong")
-        }
-        return true
-        }
-    
-    
+   
+
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         switch indexPath.section {
         case 0:
@@ -104,8 +83,8 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
 //            header?.backgroundColor = .yellow
             header?.titleLebel.textColor = .black
            
-            return header!
-        }else{
+            return header!}
+            else{
             let footer  = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "footerId", for: indexPath) as? MyFooterView
             footer?.footerTitle.text = "this is footer for section:\(indexPath.section)"
             footer?.footerTitle.textColor = .black
@@ -128,7 +107,8 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
         super.viewDidLoad()
         if let mainCollectionView = self.mainCollectionView{
             mainCollectionView.register(UINib(nibName: "MyCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "CellID")
-            
+            mainCollectionView.register(UINib(nibName: "MyCollectionViewCell1", bundle: nil), forCellWithReuseIdentifier: "CellID")
+            mainCollectionView.register(UINib(nibName: "MyCollectionViewCell2", bundle: nil), forCellWithReuseIdentifier: "CellID")
             mainCollectionView.register(UINib(nibName: "MyHeaderView", bundle: nil), forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: "headerId")
             
             mainCollectionView.register(UINib(nibName: "MyFooterView", bundle: nil), forSupplementaryViewOfKind: UICollectionElementKindSectionFooter, withReuseIdentifier: "footerId")
