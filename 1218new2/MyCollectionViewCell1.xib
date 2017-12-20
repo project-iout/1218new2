@@ -12,27 +12,31 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <collectionReusableView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ReuseIdnetifier" id="U6b-Vx-4bR" customClass="MyCollectionViewCell1" customModule="_218new2" customModuleProvider="target">
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ReuseIdnetifier1" id="8CV-TG-1ya" customClass="MyCollectionViewCell1" customModule="_218new2" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-            <autoresizingMask key="autoresizingMask"/>
-            <subviews>
-                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="PcX-oh-luG">
-                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="NCL-Ea-Sez">
-                        <size key="itemSize" width="50" height="50"/>
-                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                    </collectionViewFlowLayout>
-                </collectionView>
-            </subviews>
-            <viewLayoutGuide key="safeArea" id="VXr-Tz-HHm"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="PcX-oh-luG">
+                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="NCL-Ea-Sez">
+                            <size key="itemSize" width="50" height="50"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                    </collectionView>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="Fpo-6K-Ny2"/>
             <connections>
-                <outlet property="insideCollectionView1" destination="PcX-oh-luG" id="qak-ca-ONx"/>
+                <outlet property="insideCollectionView1" destination="PcX-oh-luG" id="0jc-0s-jav"/>
             </connections>
-            <point key="canvasLocation" x="-96" y="55"/>
-        </collectionReusableView>
+            <point key="canvasLocation" x="-142" y="-171"/>
+        </collectionViewCell>
     </objects>
 </document>

@@ -18,7 +18,7 @@ class MyCollectionViewCel2: UICollectionViewCell,UICollectionViewDataSource,UICo
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        print("ccccc")
+        print("cccc")
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "displayedImageCell", for: indexPath) as? ImageCollectionViewCell
         
         cell?.displayedImage.image = images?[indexPath.item]
