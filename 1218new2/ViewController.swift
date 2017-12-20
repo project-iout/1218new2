@@ -22,7 +22,7 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        if let cell = collectionView.dequeueReusableCell(withReuseIdentifier:"ReuseIdnetifier", for:indexPath) as? MyCollectionViewCell{
+        if let cell = collectionView.dequeueReusableCell(withReuseIdentifier:"ReuseIdnetifier1", for:indexPath) as? MyCollectionViewCell{
             switch indexPath.section{
             case 0:
 //                cell.insideCollectionView.backgroundColor = .blue
