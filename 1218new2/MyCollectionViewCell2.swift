@@ -8,17 +8,14 @@
 
 import UIKit
 
-class MyCollectionViewCel2: UICollectionViewCell,UICollectionViewDataSource,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout {
+class MyCollectionViewCell2: UICollectionViewCell,UICollectionViewDataSource,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout {
     var images:[UIImage]?
-    
-    
     var myCellSize:CGSize?
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return (images?.count)!
     }
-    
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        print("cccc")
+        print("bbbb")
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "displayedImageCell", for: indexPath) as? ImageCollectionViewCell
         
         cell?.displayedImage.image = images?[indexPath.item]
@@ -30,7 +27,7 @@ class MyCollectionViewCel2: UICollectionViewCell,UICollectionViewDataSource,UICo
         
         switch indexPath.section{
         case 0:
-            print("22 This item is in the first row")
+            print("3333 This item is in the first row")
             
             
             
@@ -55,6 +52,4 @@ class MyCollectionViewCel2: UICollectionViewCell,UICollectionViewDataSource,UICo
         insideCollectionView2.delegate  = self
         insideCollectionView2.dataSource = self
     }
-    
 }
-

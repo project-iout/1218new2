@@ -10,13 +10,10 @@ import UIKit
 
 class MyCollectionViewCell1: UICollectionViewCell,UICollectionViewDataSource,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout {
     var images:[UIImage]?
-    
-    
     var myCellSize:CGSize?
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return (images?.count)!
     }
-    
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         print("bbbb")
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "displayedImageCell", for: indexPath) as? ImageCollectionViewCell
@@ -46,7 +43,6 @@ class MyCollectionViewCell1: UICollectionViewCell,UICollectionViewDataSource,UIC
         print("my width = \(myCellSize?.width), my height=\(myCellSize?.height)")
         return self.myCellSize!
     }
-    
 
     @IBOutlet var insideCollectionView1: UICollectionView!
     override func awakeFromNib() {

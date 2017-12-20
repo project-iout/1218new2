@@ -22,27 +22,31 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        if let cell = collectionView.dequeueReusableCell(withReuseIdentifier:"ReuseIdnetifier1", for:indexPath) as? MyCollectionViewCell{
-            switch indexPath.section{
-            case 0:
-//                cell.insideCollectionView.backgroundColor = .blue
-                cell.myCellSize = CGSize(width: 265, height: 180)
-                cell.images = [(UIImage(named: "24"))!, (UIImage(named: "1"))!, (UIImage(named: "2"))!, (UIImage(named: "3"))!, (UIImage(named: "4"))!, (UIImage(named: "5"))!, (UIImage(named: "6"))!, (UIImage(named: "7"))!]
-            case 1:
-//                cell.insideCollectionView .backgroundColor = .yellow
-                cell.myCellSize = CGSize(width: 180, height: 130)
-                cell.images = [(UIImage(named: "19"))!, (UIImage(named: "21"))!, (UIImage(named: "22"))!, (UIImage(named: "20"))!]
-            case 2:
-//                cell.insideCollectionView .backgroundColor = .green
-                cell.myCellSize = CGSize(width: 180, height: 130)
-                cell.images = [(UIImage(named: "6"))!, (UIImage(named: "7"))!, (UIImage(named: "8"))!, (UIImage(named: "9"))!, (UIImage(named: "10"))!, (UIImage(named: "11"))!, (UIImage(named: "12"))!, (UIImage(named: "13"))!, (UIImage(named: "14"))!]
-            default:
-                cell.insideCollectionView .backgroundColor = .white
-                cell.myCellSize = .zero
-            }
-             return cell
-            }
-            return UICollectionViewCell(frame: .zero)
+        if indexPath.section == 0 {
+
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "AAAB", for: indexPath) as? MyCollectionViewCell
+
+            cell?.myCellSize = CGSize(width: 265, height: 180)
+            cell?.images = [(UIImage(named: "24"))!, (UIImage(named: "1"))!, (UIImage(named: "2"))!, (UIImage(named: "3"))!, (UIImage(named: "4"))!, (UIImage(named: "5"))!, (UIImage(named: "6"))!, (UIImage(named: "7"))!]
+            return cell!
+
+        }else if indexPath.section == 1 {
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "BBBB", for: indexPath) as? MyCollectionViewCell1
+
+            cell?.myCellSize = CGSize(width: 180, height: 130)
+            cell?.images = [(UIImage(named: "19"))!, (UIImage(named: "21"))!, (UIImage(named: "22"))!, (UIImage(named: "20"))!]
+            return cell!
+        }
+        else {
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "FFFF", for: indexPath) as? MyCollectionViewCell2
+
+            cell?.myCellSize = CGSize(width: 180, height: 130)
+            cell?.images = [(UIImage(named: "6"))!, (UIImage(named: "7"))!, (UIImage(named: "8"))!, (UIImage(named: "9"))!, (UIImage(named: "10"))!, (UIImage(named: "11"))!, (UIImage(named: "12"))!, (UIImage(named: "13"))!, (UIImage(named: "14"))!]
+            return cell!
+        }
+        
+        
+        
     }
     
    
@@ -107,9 +111,13 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
     override func viewDidLoad() {
         super.viewDidLoad()
         if let mainCollectionView = self.mainCollectionView{
-            mainCollectionView.register(UINib(nibName: "MyCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "ReuseIdnetifier")
-            mainCollectionView.register(UINib(nibName: "MyCollectionViewCell1", bundle: nil), forCellWithReuseIdentifier: "ReuseIdnetifier1")
-            mainCollectionView.register(UINib(nibName: "MyCollectionViewCell2", bundle: nil), forCellWithReuseIdentifier: "ReuseIdnetifier2")
+            
+            mainCollectionView.register(UINib(nibName: "MyCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "AAAB")
+            
+            mainCollectionView.register(UINib(nibName: "MyCollectionViewCell1", bundle: nil), forCellWithReuseIdentifier: "BBBB")
+            
+            mainCollectionView.register(UINib(nibName: "MyCollectionViewCell2", bundle: nil), forCellWithReuseIdentifier: "FFFF")
+            
             mainCollectionView.register(UINib(nibName: "MyHeaderView", bundle: nil), forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: "headerId")
             
             mainCollectionView.register(UINib(nibName: "MyFooterView", bundle: nil), forSupplementaryViewOfKind: UICollectionElementKindSectionFooter, withReuseIdentifier: "footerId")
