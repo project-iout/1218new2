@@ -17,6 +17,7 @@ class MyCollectionViewCell: UICollectionViewCell,UICollectionViewDataSource,UICo
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        print("aaaa")
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "displayedImageCell", for: indexPath) as? ImageCollectionViewCell
         
         cell?.displayedImage.image = images?[indexPath.item]
@@ -28,7 +29,7 @@ class MyCollectionViewCell: UICollectionViewCell,UICollectionViewDataSource,UICo
         
         switch indexPath.section{
         case 0:
-            print("This item is in the first row")
+            print("00 This item is in the first row")
     
     
             
@@ -48,7 +49,7 @@ class MyCollectionViewCell: UICollectionViewCell,UICollectionViewDataSource,UICo
     @IBOutlet var insideCollectionView: UICollectionView!
     override func awakeFromNib() {
         super.awakeFromNib()
-        print("awake from nib")
+        print("awake from nib000")
         insideCollectionView.register(UINib(nibName: "ImageCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "displayedImageCell")
         insideCollectionView.delegate  = self
         insideCollectionView.dataSource = self

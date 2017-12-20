@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MyCollectionViewCell2: UICollectionViewCell,UICollectionViewDataSource,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout {
+class MyCollectionViewCel2: UICollectionViewCell,UICollectionViewDataSource,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout {
     var images:[UIImage]?
     
     var myCellSize:CGSize?
@@ -17,6 +17,7 @@ class MyCollectionViewCell2: UICollectionViewCell,UICollectionViewDataSource,UIC
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        print("ccccc")
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "displayedImageCell", for: indexPath) as? ImageCollectionViewCell
         
         cell?.displayedImage.image = images?[indexPath.item]
@@ -28,7 +29,7 @@ class MyCollectionViewCell2: UICollectionViewCell,UICollectionViewDataSource,UIC
         
         switch indexPath.section{
         case 0:
-            print("This item is in the first row")
+            print("22 This item is in the first row")
             
             
             
@@ -45,14 +46,14 @@ class MyCollectionViewCell2: UICollectionViewCell,UICollectionViewDataSource,UIC
         return self.myCellSize!
     }
     
-   
     @IBOutlet var insideCollectionView2: UICollectionView!
     override func awakeFromNib() {
         super.awakeFromNib()
-        print("awake from nib")
+        print("awake from nib222")
         insideCollectionView2.register(UINib(nibName: "ImageCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "displayedImageCell")
         insideCollectionView2.delegate  = self
         insideCollectionView2.dataSource = self
     }
+    
 }
 

@@ -21,7 +21,7 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        if let cell = collectionView.dequeueReusableCell(withReuseIdentifier:"CellID", for:indexPath) as? MyCollectionViewCell{
+        if let cell = collectionView.dequeueReusableCell(withReuseIdentifier:"ReuseIdnetifier", for:indexPath) as? MyCollectionViewCell{
             switch indexPath.section{
             case 0:
 //                cell.insideCollectionView.backgroundColor = .blue
@@ -106,9 +106,9 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
     override func viewDidLoad() {
         super.viewDidLoad()
         if let mainCollectionView = self.mainCollectionView{
-            mainCollectionView.register(UINib(nibName: "MyCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "CellID")
-            mainCollectionView.register(UINib(nibName: "MyCollectionViewCell1", bundle: nil), forCellWithReuseIdentifier: "CellID")
-            mainCollectionView.register(UINib(nibName: "MyCollectionViewCell2", bundle: nil), forCellWithReuseIdentifier: "CellID")
+            mainCollectionView.register(UINib(nibName: "MyCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "ReuseIdnetifier")
+            mainCollectionView.register(UINib(nibName: "MyCollectionViewCell1", bundle: nil), forCellWithReuseIdentifier: "ReuseIdnetifier1")
+            mainCollectionView.register(UINib(nibName: "MyCollectionViewCell2", bundle: nil), forCellWithReuseIdentifier: "ReuseIdnetifier2")
             mainCollectionView.register(UINib(nibName: "MyHeaderView", bundle: nil), forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: "headerId")
             
             mainCollectionView.register(UINib(nibName: "MyFooterView", bundle: nil), forSupplementaryViewOfKind: UICollectionElementKindSectionFooter, withReuseIdentifier: "footerId")
