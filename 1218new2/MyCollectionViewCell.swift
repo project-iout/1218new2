@@ -10,6 +10,7 @@ import UIKit
 
 class MyCollectionViewCell: UICollectionViewCell,UICollectionViewDataSource,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout {
     var images:[UIImage]?
+    
  
     var myCellSize:CGSize?
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
