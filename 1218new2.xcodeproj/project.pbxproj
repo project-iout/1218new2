@@ -15,6 +15,10 @@
 		4013A1751FE78DCA00F3AD89 /* MyHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4013A1731FE78DCA00F3AD89 /* MyHeaderView.xib */; };
 		4013A1781FE7914800F3AD89 /* MyFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4013A1761FE7914800F3AD89 /* MyFooterView.swift */; };
 		4013A1791FE7914800F3AD89 /* MyFooterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4013A1771FE7914800F3AD89 /* MyFooterView.xib */; };
+		4042CC741FEA13350009B912 /* MyCollectionViewCell2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4042CC721FEA13350009B912 /* MyCollectionViewCell2.swift */; };
+		4042CC751FEA13350009B912 /* MyCollectionViewCell2.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4042CC731FEA13350009B912 /* MyCollectionViewCell2.xib */; };
+		40D92C851FE928D90073647C /* MyCollectionViewCell1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40D92C831FE928D90073647C /* MyCollectionViewCell1.swift */; };
+		40D92C861FE928D90073647C /* MyCollectionViewCell1.xib in Resources */ = {isa = PBXBuildFile; fileRef = 40D92C841FE928D90073647C /* MyCollectionViewCell1.xib */; };
 		40EBE7E71FE770E100F7EA42 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40EBE7E61FE770E100F7EA42 /* AppDelegate.swift */; };
 		40EBE7E91FE770E100F7EA42 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40EBE7E81FE770E100F7EA42 /* ViewController.swift */; };
 		40EBE7EC1FE770E100F7EA42 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 40EBE7EA1FE770E100F7EA42 /* Main.storyboard */; };
@@ -31,6 +35,10 @@
 		4013A1731FE78DCA00F3AD89 /* MyHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyHeaderView.xib; sourceTree = "<group>"; };
 		4013A1761FE7914800F3AD89 /* MyFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFooterView.swift; sourceTree = "<group>"; };
 		4013A1771FE7914800F3AD89 /* MyFooterView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyFooterView.xib; sourceTree = "<group>"; };
+		4042CC721FEA13350009B912 /* MyCollectionViewCell2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCollectionViewCell2.swift; sourceTree = "<group>"; };
+		4042CC731FEA13350009B912 /* MyCollectionViewCell2.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyCollectionViewCell2.xib; sourceTree = "<group>"; };
+		40D92C831FE928D90073647C /* MyCollectionViewCell1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCollectionViewCell1.swift; sourceTree = "<group>"; };
+		40D92C841FE928D90073647C /* MyCollectionViewCell1.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyCollectionViewCell1.xib; sourceTree = "<group>"; };
 		40EBE7E31FE770E100F7EA42 /* 1218new2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 1218new2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		40EBE7E61FE770E100F7EA42 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		40EBE7E81FE770E100F7EA42 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -79,6 +87,10 @@
 				40EBE7EF1FE770E100F7EA42 /* LaunchScreen.storyboard */,
 				40EBE7F21FE770E100F7EA42 /* Info.plist */,
 				4013A16A1FE77F9000F3AD89 /* MyCollectionViewCell.swift */,
+				40D92C831FE928D90073647C /* MyCollectionViewCell1.swift */,
+				4042CC721FEA13350009B912 /* MyCollectionViewCell2.swift */,
+				4042CC731FEA13350009B912 /* MyCollectionViewCell2.xib */,
+				40D92C841FE928D90073647C /* MyCollectionViewCell1.xib */,
 				4013A16B1FE77F9000F3AD89 /* MyCollectionViewCell.xib */,
 				4013A1721FE78DCA00F3AD89 /* MyHeaderView.swift */,
 				4013A1731FE78DCA00F3AD89 /* MyHeaderView.xib */,
@@ -147,11 +159,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4042CC751FEA13350009B912 /* MyCollectionViewCell2.xib in Resources */,
 				4013A1791FE7914800F3AD89 /* MyFooterView.xib in Resources */,
 				40EBE7F11FE770E100F7EA42 /* LaunchScreen.storyboard in Resources */,
 				40EBE7EE1FE770E100F7EA42 /* Assets.xcassets in Resources */,
 				4013A16D1FE77F9000F3AD89 /* MyCollectionViewCell.xib in Resources */,
 				4013A1751FE78DCA00F3AD89 /* MyHeaderView.xib in Resources */,
+				40D92C861FE928D90073647C /* MyCollectionViewCell1.xib in Resources */,
 				40EBE7EC1FE770E100F7EA42 /* Main.storyboard in Resources */,
 				4013A1711FE785A800F3AD89 /* ImageCollectionViewCell.xib in Resources */,
 			);
@@ -168,6 +182,8 @@
 				4013A1781FE7914800F3AD89 /* MyFooterView.swift in Sources */,
 				40EBE7E91FE770E100F7EA42 /* ViewController.swift in Sources */,
 				40EBE7E71FE770E100F7EA42 /* AppDelegate.swift in Sources */,
+				40D92C851FE928D90073647C /* MyCollectionViewCell1.swift in Sources */,
+				4042CC741FEA13350009B912 /* MyCollectionViewCell2.swift in Sources */,
 				4013A1701FE785A800F3AD89 /* ImageCollectionViewCell.swift in Sources */,
 				4013A16C1FE77F9000F3AD89 /* MyCollectionViewCell.swift in Sources */,
 			);
