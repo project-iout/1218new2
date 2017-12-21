@@ -14,19 +14,17 @@ class MyTableViewCell: UICollectionViewCell, UICollectionViewDataSource, UIColle
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-        
-        let cell = tableView.dequeueReusableCell(withIdentifier: "ZZZZ", for: indexPath)
 
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ZZZZ", for: indexPath)
+    
      
-        return cell!
+        return cell
         
         
     }
     
     
     var words: [String]?
-    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return (words!.count)
     }
