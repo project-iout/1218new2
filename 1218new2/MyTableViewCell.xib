@@ -28,7 +28,7 @@
                     </tableViewCell>
                 </subviews>
             </view>
-            <color key="backgroundColor" red="1" green="0.38552148144852028" blue="0.48074801896894392" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="backgroundColor" red="0.45775548297615709" green="1" blue="0.4081071246759721" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
         </collectionViewCell>
     </objects>

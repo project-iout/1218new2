@@ -24,6 +24,7 @@ class MyTableViewCell: UICollectionViewCell, UICollectionViewDataSource, UIColle
     }
     
     
+    
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 1
