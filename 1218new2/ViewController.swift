@@ -8,12 +8,12 @@
 
 import UIKit
 
-class ViewController: UIViewController,UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout {
+class ViewController: UIViewController,UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout, {
     var images = [UIImage]()
     
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 3
+        return 4
     }
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 1
@@ -35,11 +35,20 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
             cell?.images = [(UIImage(named: "19"))!, (UIImage(named: "21"))!, (UIImage(named: "22"))!, (UIImage(named: "20"))!]
             return cell!
         }
-        else {
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "FFFF", for: indexPath) as? MyCollectionViewCell2
-
+            
+            
+        else if indexPath.section == 2{
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "FFFF", for: indexPath) as?MyCollectionViewCell2
+            
             cell?.myCellSize = CGSize(width: 180, height: 160)
             cell?.images = [(UIImage(named: "6"))!, (UIImage(named: "7"))!, (UIImage(named: "8"))!, (UIImage(named: "9"))!, (UIImage(named: "10"))!, (UIImage(named: "11"))!, (UIImage(named: "12"))!, (UIImage(named: "13"))!, (UIImage(named: "14"))!]
+            return cell!
+        }
+            
+            
+            
+        else {
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ZZZZ", for: indexPath) as?MyTableViewCell
             return cell!
         }
         
@@ -137,7 +146,10 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
                 UINib(nibName: "MyCollectionViewCell2", bundle: nil),
                 forCellWithReuseIdentifier: "FFFF"
             )
-            
+            mainCollectionView.register(
+                UINib(nibName: "MyTableViewCell", bundle: nil),
+                forCellWithReuseIdentifier: "ZZZZ")
+         
             mainCollectionView.register(UINib(nibName: "MyHeaderView", bundle: nil), forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: "headerId")
             
             mainCollectionView.register(UINib(nibName: "MyFooterView", bundle: nil), forSupplementaryViewOfKind: UICollectionElementKindSectionFooter, withReuseIdentifier: "footerId")
