@@ -37,14 +37,12 @@ class MyTableViewCell: UICollectionViewCell, UICollectionViewDataSource, UIColle
             collectionView.dequeueReusableCell(withReuseIdentifier: "ZZZZ", for: indexPath)
         return cell
     }
-    @IBOutlet var HHHHHH: UICollectionView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
         print("awake from nibzzz")
         // Initialization code
-       HHHHHH.delegate = self
-        
+       
     }
     
     

@@ -36,21 +36,22 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
             return cell!
         }
             
-            
+
         else if indexPath.section == 2{
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "FFFF", for: indexPath) as?MyCollectionViewCell2
-            
+
             cell?.myCellSize = CGSize(width: 180, height: 160)
             cell?.images = [(UIImage(named: "6"))!, (UIImage(named: "7"))!, (UIImage(named: "8"))!, (UIImage(named: "9"))!, (UIImage(named: "10"))!, (UIImage(named: "11"))!, (UIImage(named: "12"))!, (UIImage(named: "13"))!, (UIImage(named: "14"))!]
             return cell!
         }
-            
-            
-            
+
+
+
         else {
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ABCDE", for: indexPath) as?MyTableViewCell
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "QQQ", for: indexPath) as?MyTableViewCell
          
-            var restaurantName = ["SPAO", "Campus", "Ali", "QB", "AVOS"]
+//            var restaurantName = ["SPAO", "Campus", "Ali", "QB", "AVOS"]
+            cell?.words = ["SPAO", "Campus", "Ali", "QB", "AVOS"]
             return cell!
         }
         
@@ -156,7 +157,7 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
             )
             mainCollectionView.register(
                 UINib(nibName: "MyTableViewCell", bundle: nil),
-                forCellWithReuseIdentifier: "ABCDE")
+                forCellWithReuseIdentifier: "QQQ")
          
             mainCollectionView.register(UINib(nibName: "MyHeaderView", bundle: nil), forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: "headerId")
             
