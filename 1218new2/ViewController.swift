@@ -12,8 +12,6 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
     var images = [UIImage]()
     
     
-    
-    
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 3
     }
@@ -33,14 +31,14 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
         }else if indexPath.section == 1 {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "BBBB", for: indexPath) as? MyCollectionViewCell1
 
-            cell?.myCellSize = CGSize(width: 180, height: 130)
+            cell?.myCellSize = CGSize(width: 180, height: 160)
             cell?.images = [(UIImage(named: "19"))!, (UIImage(named: "21"))!, (UIImage(named: "22"))!, (UIImage(named: "20"))!]
             return cell!
         }
         else {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "FFFF", for: indexPath) as? MyCollectionViewCell2
 
-            cell?.myCellSize = CGSize(width: 180, height: 130)
+            cell?.myCellSize = CGSize(width: 180, height: 160)
             cell?.images = [(UIImage(named: "6"))!, (UIImage(named: "7"))!, (UIImage(named: "8"))!, (UIImage(named: "9"))!, (UIImage(named: "10"))!, (UIImage(named: "11"))!, (UIImage(named: "12"))!, (UIImage(named: "13"))!, (UIImage(named: "14"))!]
             return cell!
         }
@@ -71,13 +69,14 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
             switch indexPath.section{
             case 0:
                 header?.titleLebel.text = "熱門景色"
-                header?.titleLebel.font = UIFont.systemFont(ofSize: 20)
+                header?.titleLebel.font = UIFont.systemFont(ofSize: 17)
             case 1:
                 header?.titleLebel.text = "火線話題"
             case 2:
                 header?.titleLebel.text = "精選學校"
             default:
                 header?.titleLebel.text = "沒有設定"
+          
             }
             
             
@@ -91,8 +90,20 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
             return header!}
             else{
             let footer  = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "footerId", for: indexPath) as? MyFooterView
-            footer?.footerTitle.text = "this is footer for section:\(indexPath.section)"
-            footer?.footerTitle.textColor = .black
+            
+            switch indexPath.section{
+            case 0:
+                footer?.footerTitle.text = "依據師資、校園設備、學生滿意度評比各校"
+            case 1:
+                footer?.footerTitle.text = "內文1"
+            case 2:
+                footer?.footerTitle.text = "內文2"
+            default:
+                footer?.footerTitle.text = "沒有設定"
+            }
+            
+        
+            footer?.footerTitle.textColor = .gray
 //            footer?.backgroundColor = .green
             return footer!
         }
@@ -112,11 +123,20 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
         super.viewDidLoad()
         if let mainCollectionView = self.mainCollectionView{
             
-            mainCollectionView.register(UINib(nibName: "MyCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "AAAB")
+            mainCollectionView.register(
+                UINib(nibName: "MyCollectionViewCell", bundle: nil),
+                forCellWithReuseIdentifier: "AAAB"
+            )
             
-            mainCollectionView.register(UINib(nibName: "MyCollectionViewCell1", bundle: nil), forCellWithReuseIdentifier: "BBBB")
+            mainCollectionView.register(
+                UINib(nibName: "MyCollectionViewCell1", bundle: nil),
+                forCellWithReuseIdentifier: "BBBB"
+            )
             
-            mainCollectionView.register(UINib(nibName: "MyCollectionViewCell2", bundle: nil), forCellWithReuseIdentifier: "FFFF")
+            mainCollectionView.register(
+                UINib(nibName: "MyCollectionViewCell2", bundle: nil),
+                forCellWithReuseIdentifier: "FFFF"
+            )
             
             mainCollectionView.register(UINib(nibName: "MyHeaderView", bundle: nil), forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: "headerId")
             
