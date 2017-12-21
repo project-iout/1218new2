@@ -17,7 +17,8 @@
 		4013A1791FE7914800F3AD89 /* MyFooterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4013A1771FE7914800F3AD89 /* MyFooterView.xib */; };
 		4042CC741FEA13350009B912 /* MyCollectionViewCell2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4042CC721FEA13350009B912 /* MyCollectionViewCell2.swift */; };
 		4042CC751FEA13350009B912 /* MyCollectionViewCell2.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4042CC731FEA13350009B912 /* MyCollectionViewCell2.xib */; };
-		4042CC7C1FEB898B0009B912 /* MyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4042CC7A1FEB898B0009B912 /* MyTableViewCell.swift */; };
+		4042CC801FEB9F520009B912 /* MyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4042CC7E1FEB9F520009B912 /* MyTableViewCell.swift */; };
+		4042CC811FEB9F520009B912 /* MyTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4042CC7F1FEB9F520009B912 /* MyTableViewCell.xib */; };
 		40D92C851FE928D90073647C /* MyCollectionViewCell1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40D92C831FE928D90073647C /* MyCollectionViewCell1.swift */; };
 		40D92C861FE928D90073647C /* MyCollectionViewCell1.xib in Resources */ = {isa = PBXBuildFile; fileRef = 40D92C841FE928D90073647C /* MyCollectionViewCell1.xib */; };
 		40EBE7E71FE770E100F7EA42 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40EBE7E61FE770E100F7EA42 /* AppDelegate.swift */; };
@@ -38,7 +39,8 @@
 		4013A1771FE7914800F3AD89 /* MyFooterView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyFooterView.xib; sourceTree = "<group>"; };
 		4042CC721FEA13350009B912 /* MyCollectionViewCell2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCollectionViewCell2.swift; sourceTree = "<group>"; };
 		4042CC731FEA13350009B912 /* MyCollectionViewCell2.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyCollectionViewCell2.xib; sourceTree = "<group>"; };
-		4042CC7A1FEB898B0009B912 /* MyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTableViewCell.swift; sourceTree = "<group>"; };
+		4042CC7E1FEB9F520009B912 /* MyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTableViewCell.swift; sourceTree = "<group>"; };
+		4042CC7F1FEB9F520009B912 /* MyTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyTableViewCell.xib; sourceTree = "<group>"; };
 		40D92C831FE928D90073647C /* MyCollectionViewCell1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCollectionViewCell1.swift; sourceTree = "<group>"; };
 		40D92C841FE928D90073647C /* MyCollectionViewCell1.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyCollectionViewCell1.xib; sourceTree = "<group>"; };
 		40EBE7E31FE770E100F7EA42 /* 1218new2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 1218new2.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -91,7 +93,8 @@
 				4013A16A1FE77F9000F3AD89 /* MyCollectionViewCell.swift */,
 				40D92C831FE928D90073647C /* MyCollectionViewCell1.swift */,
 				4042CC721FEA13350009B912 /* MyCollectionViewCell2.swift */,
-				4042CC7A1FEB898B0009B912 /* MyTableViewCell.swift */,
+				4042CC7E1FEB9F520009B912 /* MyTableViewCell.swift */,
+				4042CC7F1FEB9F520009B912 /* MyTableViewCell.xib */,
 				4042CC731FEA13350009B912 /* MyCollectionViewCell2.xib */,
 				40D92C841FE928D90073647C /* MyCollectionViewCell1.xib */,
 				4013A16B1FE77F9000F3AD89 /* MyCollectionViewCell.xib */,
@@ -167,6 +170,7 @@
 				40EBE7F11FE770E100F7EA42 /* LaunchScreen.storyboard in Resources */,
 				40EBE7EE1FE770E100F7EA42 /* Assets.xcassets in Resources */,
 				4013A16D1FE77F9000F3AD89 /* MyCollectionViewCell.xib in Resources */,
+				4042CC811FEB9F520009B912 /* MyTableViewCell.xib in Resources */,
 				4013A1751FE78DCA00F3AD89 /* MyHeaderView.xib in Resources */,
 				40D92C861FE928D90073647C /* MyCollectionViewCell1.xib in Resources */,
 				40EBE7EC1FE770E100F7EA42 /* Main.storyboard in Resources */,
@@ -186,7 +190,7 @@
 				40EBE7E91FE770E100F7EA42 /* ViewController.swift in Sources */,
 				40EBE7E71FE770E100F7EA42 /* AppDelegate.swift in Sources */,
 				40D92C851FE928D90073647C /* MyCollectionViewCell1.swift in Sources */,
-				4042CC7C1FEB898B0009B912 /* MyTableViewCell.swift in Sources */,
+				4042CC801FEB9F520009B912 /* MyTableViewCell.swift in Sources */,
 				4042CC741FEA13350009B912 /* MyCollectionViewCell2.swift in Sources */,
 				4013A1701FE785A800F3AD89 /* ImageCollectionViewCell.swift in Sources */,
 				4013A16C1FE77F9000F3AD89 /* MyCollectionViewCell.swift in Sources */,

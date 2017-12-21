@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController,UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout, {
+class ViewController: UIViewController,UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout {
     var images = [UIImage]()
     
     
@@ -48,7 +48,9 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
             
             
         else {
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ZZZZ", for: indexPath) as?MyTableViewCell
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ABCDE", for: indexPath) as?MyTableViewCell
+         
+            var restaurantName = ["SPAO", "Campus", "Ali", "QB", "AVOS"]
             return cell!
         }
         
@@ -65,6 +67,8 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
         case 1:
             return CGSize(width: self.view.frame.width, height: 150)
         case 2:
+            return CGSize(width: self.view.frame.width, height: 150)
+        case 3:
             return CGSize(width: self.view.frame.width, height: 150)
         default:
             return .zero
@@ -83,6 +87,8 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
                 header?.titleLebel.text = "火線話題"
             case 2:
                 header?.titleLebel.text = "精選學校"
+            case 3:
+                header?.titleLebel.text = "最後一則"
             default:
                 header?.titleLebel.text = "沒有設定"
           
@@ -107,6 +113,8 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
                 footer?.footerTitle.text = "內文1"
             case 2:
                 footer?.footerTitle.text = "內文2"
+            case 3:
+                footer?.footerTitle.text = "此頁見底"
             default:
                 footer?.footerTitle.text = "沒有設定"
             }
@@ -148,7 +156,7 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
             )
             mainCollectionView.register(
                 UINib(nibName: "MyTableViewCell", bundle: nil),
-                forCellWithReuseIdentifier: "ZZZZ")
+                forCellWithReuseIdentifier: "ABCDE")
          
             mainCollectionView.register(UINib(nibName: "MyHeaderView", bundle: nil), forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: "headerId")
             
