@@ -48,10 +48,10 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
 
 
         else {
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "QQQ", for: indexPath) as?MyTableViewCell
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "QQQ", for: indexPath) as? MyCollectionViewCell3
          
 //            var restaurantName = ["SPAO", "Campus", "Ali", "QB", "AVOS"]
-            cell?.words = ["SPAO", "Campus", "Ali", "QB", "AVOS"]
+//            cell?.words = ["SPAO", "Campus", "Ali", "QB", "AVOS"]
             return cell!
         }
         
@@ -157,7 +157,7 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
                 forCellWithReuseIdentifier: "FFFF"
             )
             mainCollectionView.register(
-                UINib(nibName: "MyTableViewCell", bundle: nil),
+                UINib(nibName: "MyCollectionViewCell3", bundle: nil),
                 forCellWithReuseIdentifier: "QQQ")
          
             mainCollectionView.register(UINib(nibName: "MyHeaderView", bundle: nil), forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: "headerId")

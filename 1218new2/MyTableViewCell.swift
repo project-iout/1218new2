@@ -8,44 +8,33 @@
 
 import UIKit
 
-class MyTableViewCell: UICollectionViewCell, UICollectionViewDataSource, UICollectionViewDelegate, UITableViewDelegate, UITableViewDataSource{
+class MyTableViewCell: UITableViewCell{
     
-    var words: [String]?
+    @IBOutlet weak var myLeftText: UILabel!
+    @IBOutlet weak var myRightText: UILabel!
     
+//    var words: [String]?
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return words!.count
-    }
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "myTableCell", for: indexPath)
-        cell.textLabel?.text = words?[indexPath.row]
-        
-        return cell
-    }
-    
-    
-    
-
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 1
-    }
-    
-
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-
-        let cell =
-            collectionView.dequeueReusableCell(withReuseIdentifier: "ZZZZ", for: indexPath)
-        return cell
-    }
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        print("awake from nibzzz")
-        // Initialization code
-       
-    }
-    
+//
+//    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+//        return words!.count
+//    }
+//    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+//        let cell = tableView.dequeueReusableCell(withIdentifier: "myTableCell", for: indexPath)
+//        cell.textLabel?.text = words?[indexPath.row]
+//
+//        return cell
+//    }
+//
+//
+//
+//    override func awakeFromNib() {
+//        super.awakeFromNib()
+//        print("awake Table cell")
+//        // Initialization code
+//
+//    }
+//
     
 }
 
