@@ -13,7 +13,7 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
     
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 4
+        return 5
     }
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 1
@@ -47,13 +47,24 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
 
 
 
-        else {
+        else if indexPath.section == 3{
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "QQQ", for: indexPath) as? MyCollectionViewCell3
          
 //            var restaurantName = ["SPAO", "Campus", "Ali", "QB", "AVOS"]
 //            cell?.words = ["SPAO", "Campus", "Ali", "QB", "AVOS"]
             return cell!
         }
+        
+        else
+        {
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "RRR", for: indexPath) as?MyCollectionViewCell4
+            
+            return cell!
+        }
+        
+        
+        
+        
         
         
         
@@ -70,6 +81,8 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
         case 2:
             return CGSize(width: self.view.frame.width, height: 150)
         case 3:
+            return CGSize(width: self.view.frame.width, height: 150)
+        case  4:
             return CGSize(width: self.view.frame.width, height: 150)
         default:
             return .zero
@@ -90,6 +103,8 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
             case 2:
                 header?.titleLebel.text = "精選學校"
             case 3:
+                header?.titleLebel.text = "超值商品"
+            case 4:
                 header?.titleLebel.text = "最後一則"
             default:
                 header?.titleLebel.text = "沒有設定"
@@ -116,6 +131,8 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
             case 2:
                 footer?.footerTitle.text = "內文2"
             case 3:
+                footer?.footerTitle.text = "商品內容"
+            case 4:
                 footer?.footerTitle.text = "此頁見底"
             default:
                 footer?.footerTitle.text = "沒有設定"
@@ -158,9 +175,16 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
             )
             mainCollectionView.register(
                 UINib(nibName: "MyCollectionViewCell3", bundle: nil),
-                forCellWithReuseIdentifier: "QQQ")
-         
-            mainCollectionView.register(UINib(nibName: "MyHeaderView", bundle: nil), forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: "headerId")
+                forCellWithReuseIdentifier: "QQQ"
+            )
+           mainCollectionView.register(
+                UINib(nibName: "MyCollectionViewCell4", bundle: nil),
+                forCellWithReuseIdentifier: "RRR")
+                
+                
+                
+            mainCollectionView.register(
+                UINib(nibName: "MyHeaderView", bundle: nil), forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: "headerId")
             
             mainCollectionView.register(UINib(nibName: "MyFooterView", bundle: nil), forSupplementaryViewOfKind: UICollectionElementKindSectionFooter, withReuseIdentifier: "footerId")
         }
@@ -174,6 +198,7 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
 
 
 }
+
 
 
 

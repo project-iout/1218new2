@@ -40,7 +40,7 @@ class MyCollectionViewCell1: UICollectionViewCell,UICollectionViewDataSource,UIC
     
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        print("my width = \(myCellSize?.width), my height=\(myCellSize?.height)")
+          print("my width = \(myCellSize?.width), my height=\(myCellSize?.height)")
         return self.myCellSize!
     }
 
