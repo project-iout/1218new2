@@ -1,4 +1,4 @@
-
+//
 //  PostCell.swift
 //  Facebook+Research
 //
@@ -16,6 +16,7 @@ class PostCell : UITableViewCell
     @IBOutlet weak var postImageView: UIImageView!
     @IBOutlet weak var captionLabel: UILabel!
     @IBOutlet weak var postStatsLabel: UILabel!
+    
     
     var post: Post! {
         didSet {
@@ -36,8 +37,3 @@ class PostCell : UITableViewCell
     
     
 }
-
-
-
-
-
