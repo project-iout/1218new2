@@ -17,7 +17,7 @@ class MyCollectionViewCell: UICollectionViewCell,UICollectionViewDataSource,UICo
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        print("aaaa")
+        print("aaa")
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "displayedImageCell", for: indexPath) as? ImageCollectionViewCell
         
         cell?.displayedImage.image = images?[indexPath.item]
@@ -30,7 +30,7 @@ class MyCollectionViewCell: UICollectionViewCell,UICollectionViewDataSource,UICo
         
         switch indexPath.section{
         case 0:
-            print("00 This item is in the first row")
+            print("This item is in the first row")
     
     
             

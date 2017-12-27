@@ -12,6 +12,7 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
     var images = [UIImage]()
     
     
+    
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 5
     }
@@ -155,9 +156,87 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
         return CGSize(width: collectionView.frame.width, height: 20)
     }
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let section = indexPath.section
+        let item = indexPath.item
+        print("you select section \(section), item = \(item)")
+        
+    
+ 
+    }
+    
     @IBOutlet var mainCollectionView: UICollectionView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+    
+        var dataArray = [String]()
+        
+        let url = URL(string:"https://www.ioutback.com/api/pics/hottest")
+        
+        URLSession.shared.dataTask(with: (url)!, completionHandler: {(data, response, error) -> Void in
+            
+            if let jsonObj = try? JSONSerialization.jsonObject(with: data!, options: .allowFragments) as? NSDictionary {
+                
+                if error != nil
+                {
+                    print ("ERROR")
+                }
+                else{
+                    if let content = data
+                    {
+                        do
+                        {
+                            let myJson = try JSONSerialization.jsonObject(with: content, options: JSONSerialization.ReadingOptions.mutableContainers) as AnyObject
+                            print(myJson)
+                        }
+                        catch
+                        {
+                        }
+                    }
+                }
+                let json = try
+                    JSONSerialization.jsonObject(with: data, options: options: .mutableContainers) as?
+                AnyObject
+                print(myJson)
+                let jsonObject = JSONSerialization.jsonObject(with: data, options: .allowFragments)
+                let array = jsonObject["schoolImages"]
+        
+//        URLSession.shared.dataTask(with: url, completionHandler: <#T##(Data?, URLResponse?, Error?) -> Void#>){
+//
+//        }
+//
+//        URLSession.shared.dataTask(with: (url )!) { (data, response, error) in
+//            if error != nil
+//            {
+//                print ("ERROR")
+//            }
+//            else{
+//                if let content = data
+//                {
+//                    do
+//                    {
+//                        let myJson = try JSONSerialization.jsonObject(with: content, options: JSONSerialization.ReadingOptions.mutableContainers) as AnyObject
+//                        print(myJson)
+//                    }
+//                    catch
+//                    {
+//                    }
+//                }
+//            }
+//            let json = try
+//                JSONSerialization.jsonObject(with: data, options: options: .mutableContainers) as?
+//            AnyObject
+//            print(myJson)
+//            let jsonObject = JSONSerialization.jsonObject(with: data, options: .allowFragments)
+//            let array = jsonObject["schoolImages"]
+     
+        }
+
+        
+        
+        
+        
         if let mainCollectionView = self.mainCollectionView{
             
             mainCollectionView.register(
@@ -189,8 +268,12 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
             
             mainCollectionView.register(UINib(nibName: "MyFooterView", bundle: nil), forSupplementaryViewOfKind: UICollectionElementKindSectionFooter, withReuseIdentifier: "footerId")
         }
-       
+        struct schoolImages {
+            let imageUrl: String
+            
+        }
     }
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
