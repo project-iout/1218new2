@@ -12,7 +12,6 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
     var images = [UIImage]()
     
     
-    
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 5
     }
@@ -170,43 +169,30 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
         super.viewDidLoad()
         
     
-        var dataArray = [String]()
         
-        let url = URL(string:"https://www.ioutback.com/api/pics/hottest")
-        
-        URLSession.shared.dataTask(with: (url)!, completionHandler: {(data, response, error) -> Void in
+    
+        let urlString = "https://www.ioutback.com/api/pics/hottest"
+        let url = URL(string: urlString)
+        URLSession.shared.dataTask(with:url!) { (data, response, error) in
+            if error != nil {
+                print(error)
+            } else {
+                do {
+                    
+                    let parsedData = try JSONSerialization.jsonObject(with: data!) as! [String:Any]
+                    let currentConditions = parsedData["currently"] as! [String:Any]
+                    
+                    print(currentConditions)
+                    
+                    let currentTemperatureF = currentConditions["temperature"] as! Double
+                    print(currentTemperatureF)
+                } catch let error as NSError {
+                    print(error)
+                }
+            }
             
-            if let jsonObj = try? JSONSerialization.jsonObject(with: data!, options: .allowFragments) as? NSDictionary {
-                
-                if error != nil
-                {
-                    print ("ERROR")
-                }
-                else{
-                    if let content = data
-                    {
-                        do
-                        {
-                            let myJson = try JSONSerialization.jsonObject(with: content, options: JSONSerialization.ReadingOptions.mutableContainers) as AnyObject
-                            print(myJson)
-                        }
-                        catch
-                        {
-                        }
-                    }
-                }
-                let json = try
-                    JSONSerialization.jsonObject(with: data, options: options: .mutableContainers) as?
-                AnyObject
-                print(myJson)
-                let jsonObject = JSONSerialization.jsonObject(with: data, options: .allowFragments)
-                let array = jsonObject["schoolImages"]
-        
-//        URLSession.shared.dataTask(with: url, completionHandler: <#T##(Data?, URLResponse?, Error?) -> Void#>){
-//
-//        }
-//
-//        URLSession.shared.dataTask(with: (url )!) { (data, response, error) in
+            }.resume()
+//        URLSession.shared.dataTask(with: (url as? URL)!) { (data, response, error) in
 //            if error != nil
 //            {
 //                print ("ERROR")
@@ -230,8 +216,8 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
 //            print(myJson)
 //            let jsonObject = JSONSerialization.jsonObject(with: data, options: .allowFragments)
 //            let array = jsonObject["schoolImages"]
-     
-        }
+//
+//        }
 
         
         
