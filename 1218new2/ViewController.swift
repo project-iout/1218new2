@@ -168,23 +168,23 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
     override func viewDidLoad() {
         super.viewDidLoad()
         
-    
-        
-    
-        let urlString = "https://www.ioutback.com/api/pics/hottest"
+       
+    //Retrive the data from this link
+        let urlString = "http://validate.jsontest.com/?json=%7B%22key%22:%22value%22"
         let url = URL(string: urlString)
+        // url -> task
         URLSession.shared.dataTask(with:url!) { (data, response, error) in
+        //判斷error.   data means downloaded data
             if error != nil {
                 print(error)
             } else {
                 do {
-                    
+                   // 用JSONSerialization轉成Dictionary 來抓到的Json String
+                    //亦可,先做Dictionary再用JSONSerialization轉成Json String。
                     let parsedData = try JSONSerialization.jsonObject(with: data!) as! [String:Any]
-                    let currentConditions = parsedData["currently"] as! [String:Any]
-                    
+                    let currentConditions = parsedData["error_info"]
                     print(currentConditions)
-                    
-                    let currentTemperatureF = currentConditions["temperature"] as! Double
+                    let currentTemperatureF = parsedData["error"] 
                     print(currentTemperatureF)
                 } catch let error as NSError {
                     print(error)
@@ -192,34 +192,7 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
             }
             
             }.resume()
-//        URLSession.shared.dataTask(with: (url as? URL)!) { (data, response, error) in
-//            if error != nil
-//            {
-//                print ("ERROR")
-//            }
-//            else{
-//                if let content = data
-//                {
-//                    do
-//                    {
-//                        let myJson = try JSONSerialization.jsonObject(with: content, options: JSONSerialization.ReadingOptions.mutableContainers) as AnyObject
-//                        print(myJson)
-//                    }
-//                    catch
-//                    {
-//                    }
-//                }
-//            }
-//            let json = try
-//                JSONSerialization.jsonObject(with: data, options: options: .mutableContainers) as?
-//            AnyObject
-//            print(myJson)
-//            let jsonObject = JSONSerialization.jsonObject(with: data, options: .allowFragments)
-//            let array = jsonObject["schoolImages"]
-//
-//        }
 
-        
         
         
         
