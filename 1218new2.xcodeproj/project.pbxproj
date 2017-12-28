@@ -21,6 +21,7 @@
 		4042CC751FEA13350009B912 /* MyCollectionViewCell2.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4042CC731FEA13350009B912 /* MyCollectionViewCell2.xib */; };
 		4042CC801FEB9F520009B912 /* MyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4042CC7E1FEB9F520009B912 /* MyTableViewCell.swift */; };
 		4042CC811FEB9F520009B912 /* MyTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4042CC7F1FEB9F520009B912 /* MyTableViewCell.xib */; };
+		4067D21B1FF4A4A80044FD4C /* ApiPicture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4067D21A1FF4A4A80044FD4C /* ApiPicture.swift */; };
 		40AC58241FF0F89200B08F6E /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40AC58231FF0F89200B08F6E /* PostCell.swift */; };
 		40ACBA1C1FF102AB00C85A72 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40ACBA1B1FF102AB00C85A72 /* Post.swift */; };
 		40ACBA1E1FF10EDC00C85A72 /* NewsFeedTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40ACBA1D1FF10EDC00C85A72 /* NewsFeedTableViewController.swift */; };
@@ -50,6 +51,7 @@
 		4042CC731FEA13350009B912 /* MyCollectionViewCell2.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyCollectionViewCell2.xib; sourceTree = "<group>"; };
 		4042CC7E1FEB9F520009B912 /* MyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTableViewCell.swift; sourceTree = "<group>"; };
 		4042CC7F1FEB9F520009B912 /* MyTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyTableViewCell.xib; sourceTree = "<group>"; };
+		4067D21A1FF4A4A80044FD4C /* ApiPicture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiPicture.swift; sourceTree = "<group>"; };
 		40AC58231FF0F89200B08F6E /* PostCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
 		40ACBA1B1FF102AB00C85A72 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		40ACBA1D1FF10EDC00C85A72 /* NewsFeedTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsFeedTableViewController.swift; sourceTree = "<group>"; };
@@ -100,6 +102,7 @@
 				4013A16F1FE785A800F3AD89 /* ImageCollectionViewCell.xib */,
 				40EBE7E61FE770E100F7EA42 /* AppDelegate.swift */,
 				40EBE7E81FE770E100F7EA42 /* ViewController.swift */,
+				4067D21A1FF4A4A80044FD4C /* ApiPicture.swift */,
 				40EBE7EA1FE770E100F7EA42 /* Main.storyboard */,
 				40EBE7ED1FE770E100F7EA42 /* Assets.xcassets */,
 				40EBE7EF1FE770E100F7EA42 /* LaunchScreen.storyboard */,
@@ -217,6 +220,7 @@
 				40EBE7E71FE770E100F7EA42 /* AppDelegate.swift in Sources */,
 				40D92C851FE928D90073647C /* MyCollectionViewCell1.swift in Sources */,
 				4042CC801FEB9F520009B912 /* MyTableViewCell.swift in Sources */,
+				4067D21B1FF4A4A80044FD4C /* ApiPicture.swift in Sources */,
 				4042CC741FEA13350009B912 /* MyCollectionViewCell2.swift in Sources */,
 				4013A1701FE785A800F3AD89 /* ImageCollectionViewCell.swift in Sources */,
 				40164C261FF0979000720F21 /* MyCollectionViewCell4.swift in Sources */,
