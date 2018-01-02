@@ -10,7 +10,10 @@ import UIKit
 
 class ViewController: UIViewController,UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout {
     var images = [UIImage]()
-    
+    var section1Image = [String]()
+    var globalImage:UIImage? = nil
+    var section1ScholImage:NSArray = []
+
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 5
@@ -19,16 +22,57 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
         return 1
     }
     
+    func get_image(_ url_str:String) -> UIImage {
+        var image: UIImage?
+    //宣告一個 變數叫做image，然後初始化一個UIImage物件 放到變數image裡面
+        let url:URL = URL(string: url_str)!
+        let session = URLSession.shared
+        let task = session.dataTask(with: url, completionHandler: {(data, response, error) in
+//     data是區域變數 只能活在dataTask方法裡面
+            if data != nil
+            {
+                image = UIImage(data: data!)!
+                //            宣告一個變數data,初始化一個image物件
+                //把data改成image之後丟掉
+            }
+        })
+        task.resume()
+        return image!
+    }
+
+    
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if indexPath.section == 0 {
-
+            
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "AAAB", for: indexPath) as? MyCollectionViewCell
+            
 
+            var imageArray: [UIImage] = []
+            
+            for image in section1ScholImage {
+                let url = URL(string:image as! String)
+                //            1.訪問網址 根據indexPath.item 取出圖片網址
+                let data = try? Data(contentsOf: url!)
+                //            2.訪問取得data
+                let image: UIImage = UIImage(data: data!)!
+                //            3.將data轉成UIImage
+                imageArray.append(image)
+            }
+            
+            cell?.images = imageArray
+            
             cell?.myCellSize = CGSize(width: 265, height: 180)
-            cell?.images = [(UIImage(named: "24"))!, (UIImage(named: "1"))!, (UIImage(named: "2"))!, (UIImage(named: "3"))!, (UIImage(named: "4"))!, (UIImage(named: "5"))!, (UIImage(named: "6"))!, (UIImage(named: "7"))!]
+        
             return cell!
 
-        }else if indexPath.section == 1 {
+//            self.section1ScholImage = section1Image
+     
+        
+            
+       
+            
+        }
+        else if indexPath.section == 1 {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "BBBB", for: indexPath) as? MyCollectionViewCell1
 
             cell?.myCellSize = CGSize(width: 180, height: 160)
@@ -168,32 +212,68 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
     override func viewDidLoad() {
         super.viewDidLoad()
         
-       
-    //Retrive the data from this link
-        let urlString = "http://validate.jsontest.com/?json=%7B%22key%22:%22value%22"
+   
+        let urlString = "https://www.ioutback.com/api/pics/hottest"
+        
         let url = URL(string: urlString)
-        // url -> task
         URLSession.shared.dataTask(with:url!) { (data, response, error) in
-        //判斷error.   data means downloaded data
             if error != nil {
-                print(error)
+                print(error as Any)
             } else {
                 do {
-                   // 用JSONSerialization轉成Dictionary 來抓到的Json String
-                    //亦可,先做Dictionary再用JSONSerialization轉成Json String。
+                    
                     let parsedData = try JSONSerialization.jsonObject(with: data!) as! [String:Any]
-                    let currentConditions = parsedData["error_info"]
-                    print(currentConditions)
-                    let currentTemperatureF = parsedData["error"] 
-                    print(currentTemperatureF)
+                    
+                    let section1Image = parsedData["schoolImages"] as! NSArray
+                    
+                    print(section1Image)
+                    
+                    self.section1ScholImage = section1Image
+                    
+                    
                 } catch let error as NSError {
                     print(error)
                 }
             }
             
             }.resume()
-
         
+        
+        
+    //Retrive the data from this link
+//        let urlString = "https://www.ioutback.com/api/pics/hottest"
+//        let url = URL(string: urlString)
+//        // url -> task
+//        URLSession.shared.dataTask(with:url!) { (data, response, error) in
+//        //判斷error.   data means downloaded data
+//            if error != nil {
+//                print(error as Any)
+//            } else{
+//                do {
+//
+//                   // 用JSONSerialization轉成Dictionary 來抓到的Json String
+//                    //亦可,先做Dictionary再用JSONSerialization轉成Json String。
+//                    let parsedData = try JSONSerialization.jsonObject(with: data!) as! [String:Any]
+//
+//                    let section1Image = parsedData["schoolImages"] as! NSArray
+//
+//                    self.section1ScholImage = section1Image
+//
+//
+////                    print(section1Image as Any)
+//
+////                    let section1Image = parsedData["schoolImages"] as! NSArray
+////
+////                    print(section1Image[0])
+//
+//
+//                } catch let error as NSError {
+//                    print(error)
+//                }
+//            }
+//
+//            }.resume()
+
         
         
         if let mainCollectionView = self.mainCollectionView{
