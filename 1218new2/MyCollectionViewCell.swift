@@ -10,6 +10,7 @@ import UIKit
 
 class MyCollectionViewCell: UICollectionViewCell,UICollectionViewDataSource,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout {
     var images:[UIImage]?
+ 
     var myCellSize:CGSize?
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -43,7 +44,9 @@ class MyCollectionViewCell: UICollectionViewCell,UICollectionViewDataSource,UICo
     
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        print("my width = \(myCellSize?.width), my height=\(myCellSize?.height)")
+        
+        
+        print("my width = \(myCellSize!.width), my height=\(myCellSize!.height)")
         return self.myCellSize!
     }
     
