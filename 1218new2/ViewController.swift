@@ -58,7 +58,7 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
                 imageArray.append(image)
             }
             cell?.images = imageArray
-      
+            cell?.insideCollectionView.reloadData()
             return cell!
 //            self.section1ScholImage = section1Image
      
@@ -71,7 +71,20 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "BBBB", for: indexPath) as? MyCollectionViewCell1
 
             cell?.myCellSize = CGSize(width: 180, height: 160)
-            cell?.images = [(UIImage(named: "19"))!, (UIImage(named: "21"))!, (UIImage(named: "22"))!, (UIImage(named: "20"))!]
+            var imageArray: [UIImage] = []
+            for image in section1ScholImage {
+                let url = URL(string:image as! String)
+                //            1.訪問網址 根據indexPath.item 取出圖片網址
+                let data = try? Data(contentsOf: url!)
+                //            2.訪問取得data
+                let image: UIImage = UIImage(data: data!)!
+                //            3.將data轉成UIImage
+                imageArray.append(image)
+            }
+            cell?.images = imageArray
+            
+//            cell?.images = [(UIImage(named: "19"))!, (UIImage(named: "21"))!, (UIImage(named: "22"))!, (UIImage(named: "20"))!]
+            cell?.insideCollectionView1.reloadData()
             return cell!
         }
             
@@ -220,7 +233,10 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
                     print(section1Image)
                     
                     self.section1ScholImage = section1Image
-                    self.mainCollectionView.reloadData()
+                    DispatchQueue.main.async {
+                        self.mainCollectionView.reloadData()
+                    }
+                    
                     
                 } catch let error as NSError {
                     print(error)

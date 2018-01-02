@@ -9,10 +9,13 @@
 import UIKit
 
 class MyCollectionViewCell: UICollectionViewCell,UICollectionViewDataSource,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout {
-    var images:[UIImage]?
- 
+    var images:[UIImage]?{
+        didSet{
+            //do something here ,   cell.insideCollectionView.reloadData()
+        }
+    }
     var myCellSize:CGSize?
-    
+   
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return (images?.count)!
     }
