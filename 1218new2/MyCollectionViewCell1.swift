@@ -15,7 +15,7 @@ class MyCollectionViewCell1: UICollectionViewCell,UICollectionViewDataSource,UIC
         return (images?.count)!
     }
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        print("bbb")
+        print("bbbb")
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "displayedImageCell", for: indexPath) as? ImageCollectionViewCell
         
         cell?.displayedImage.image = images?[indexPath.item]
@@ -27,7 +27,7 @@ class MyCollectionViewCell1: UICollectionViewCell,UICollectionViewDataSource,UIC
         
         switch indexPath.section{
         case 0:
-            print("This item is in the secpmd row")
+            print("11 This item is in the first row")
             
             
             
