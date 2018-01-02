@@ -24,7 +24,7 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
     
     func get_image(_ url_str:String) -> UIImage {
         var image: UIImage?
-    //宣告一個 變數叫做image，然後初始化一個UIImage物件 放到變數image裡面
+    //宣告一個變數叫做image，然後初始化一個UIImage物件 放到變數image裡面
         let url:URL = URL(string: url_str)!
         let session = URLSession.shared
         let task = session.dataTask(with: url, completionHandler: {(data, response, error) in
@@ -45,10 +45,9 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
         if indexPath.section == 0 {
             
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "AAAB", for: indexPath) as? MyCollectionViewCell
+                cell?.myCellSize = CGSize(width: 265, height: 180)
             
-
             var imageArray: [UIImage] = []
-            
             for image in section1ScholImage {
                 let url = URL(string:image as! String)
                 //            1.訪問網址 根據indexPath.item 取出圖片網址
@@ -58,13 +57,9 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
                 //            3.將data轉成UIImage
                 imageArray.append(image)
             }
-            
             cell?.images = imageArray
-            
-            cell?.myCellSize = CGSize(width: 265, height: 180)
-        
+      
             return cell!
-
 //            self.section1ScholImage = section1Image
      
         
@@ -208,11 +203,7 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
  
     }
     
-    @IBOutlet var mainCollectionView: UICollectionView!
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-   
+    func initialImages(){
         let urlString = "https://www.ioutback.com/api/pics/hottest"
         
         let url = URL(string: urlString)
@@ -229,7 +220,7 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
                     print(section1Image)
                     
                     self.section1ScholImage = section1Image
-                    
+                    self.mainCollectionView.reloadData()
                     
                 } catch let error as NSError {
                     print(error)
@@ -238,7 +229,15 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
             
             }.resume()
         
+    }
+    
+    @IBOutlet var mainCollectionView: UICollectionView!
+    override func viewDidLoad() {
+        super.viewDidLoad()
         
+        self.initialImages()
+       
+ 
         
     //Retrive the data from this link
 //        let urlString = "https://www.ioutback.com/api/pics/hottest"
