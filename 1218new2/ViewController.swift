@@ -13,6 +13,7 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
     var section1Image = [String]()
     var globalImage:UIImage? = nil
     var section1ScholImage:NSArray = []
+//    宣告gobal variable . section1ScholImage = 陣列
 
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
@@ -48,8 +49,9 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
                 cell?.myCellSize = CGSize(width: 265, height: 180)
             
             var imageArray: [UIImage] = []
-            for image in section1ScholImage {
-                let url = URL(string:image as! String)
+            for xxx in section1ScholImage {
+//                在golbal variable (section1ScholImage中取出被塞入的圖片)
+                let url = URL(string:xxx as! String)
                 //            1.訪問網址 根據indexPath.item 取出圖片網址
                 let data = try? Data(contentsOf: url!)
                 //            2.訪問取得data
@@ -57,16 +59,41 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
                 //            3.將data轉成UIImage
                 imageArray.append(image)
             }
+            
             cell?.images = imageArray
             cell?.insideCollectionView.reloadData()
+            
             return cell!
-//            self.section1ScholImage = section1Image
+        }
+            
+//            var xxx = [UIImage]()
+//
+//            var rrr = ["https://www.ioutback.com/images/school/welts/extra/1.jpg", "https://www.ioutback.com/images/school/welts/extra/2.jpg", "https://www.ioutback.com/images/school/welts/extra/4.jpg"]
+//            for eeee in rrr {
+//                print(eeee)
+//                let hinet = URL(string: eeee)
+//                let data = try? Data(contentsOf: hinet!)
+//                let image: UIImage = UIImage(data: data!)!
+//                xxx.append(image)
+//            }
+//
+//           let hinet2 = URL(string: rrr[1])
+//            let data2 = try? Data(contentsOf: hinet2!)
+//            let image2: UIImage = UIImage(data: data2!)!
+//            xxx.append(image2)
+//
+            
+            
+            
+            
+            
+
      
         
             
        
             
-        }
+        
         else if indexPath.section == 1 {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "BBBB", for: indexPath) as? MyCollectionViewCell1
 
@@ -102,7 +129,9 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
 
         else if indexPath.section == 3{
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "QQQ", for: indexPath) as? MyCollectionViewCell3
-         
+            
+             cell?.myTable.reloadData()
+            
 //            var restaurantName = ["SPAO", "Campus", "Ali", "QB", "AVOS"]
 //            cell?.words = ["SPAO", "Campus", "Ali", "QB", "AVOS"]
             return cell!
@@ -227,16 +256,17 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
                 do {
                     
                     let parsedData = try JSONSerialization.jsonObject(with: data!) as! [String:Any]
-                    
+//                    宣告parsedData將data轉型為string array
                     let section1Image = parsedData["schoolImages"] as! NSArray
-                    
+//                    宣告section1Image 將取出來的陣列schoolImages 轉型為NSarray
                     print(section1Image)
-                    
+
                     self.section1ScholImage = section1Image
+//                    塞值
                     DispatchQueue.main.async {
                         self.mainCollectionView.reloadData()
                     }
-                    
+
                     
                 } catch let error as NSError {
                     print(error)
@@ -255,42 +285,8 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
        
  
         
-    //Retrive the data from this link
-//        let urlString = "https://www.ioutback.com/api/pics/hottest"
-//        let url = URL(string: urlString)
-//        // url -> task
-//        URLSession.shared.dataTask(with:url!) { (data, response, error) in
-//        //判斷error.   data means downloaded data
-//            if error != nil {
-//                print(error as Any)
-//            } else{
-//                do {
-//
-//                   // 用JSONSerialization轉成Dictionary 來抓到的Json String
-//                    //亦可,先做Dictionary再用JSONSerialization轉成Json String。
-//                    let parsedData = try JSONSerialization.jsonObject(with: data!) as! [String:Any]
-//
-//                    let section1Image = parsedData["schoolImages"] as! NSArray
-//
-//                    self.section1ScholImage = section1Image
-//
-//
-////                    print(section1Image as Any)
-//
-////                    let section1Image = parsedData["schoolImages"] as! NSArray
-////
-////                    print(section1Image[0])
-//
-//
-//                } catch let error as NSError {
-//                    print(error)
-//                }
-//            }
-//
-//            }.resume()
 
-        
-        
+
         if let mainCollectionView = self.mainCollectionView{
             
             mainCollectionView.register(
