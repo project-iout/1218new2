@@ -49,49 +49,26 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
                 cell?.myCellSize = CGSize(width: 265, height: 180)
             
             var imageArray: [UIImage] = []
+//            宣告變數UIImage陣列並命名為imageArray
             for xxx in section1ScholImage {
-//                在golbal variable (section1ScholImage中取出被塞入的圖片)
+//                設定名為xxx的迴圈在golbal variable (section1ScholImage）中取出被塞入的圖片)
                 let url = URL(string:xxx as! String)
-                //            1.訪問網址 根據indexPath.item 取出圖片網址
+                //            宣告url並存入String  (因為電腦不知道此處到值是否為string)
                 let data = try? Data(contentsOf: url!)
-                //            2.訪問取得data
+                //            宣告data並將url存入
                 let image: UIImage = UIImage(data: data!)!
-                //            3.將data轉成UIImage
+                //            宣告image並存入data
                 imageArray.append(image)
+//                將image放入imageArray
             }
             
             cell?.images = imageArray
+//            將imageArray放入cell裡頭
             cell?.insideCollectionView.reloadData()
-            
+//            reloadData
             return cell!
         }
-            
-//            var xxx = [UIImage]()
-//
-//            var rrr = ["https://www.ioutback.com/images/school/welts/extra/1.jpg", "https://www.ioutback.com/images/school/welts/extra/2.jpg", "https://www.ioutback.com/images/school/welts/extra/4.jpg"]
-//            for eeee in rrr {
-//                print(eeee)
-//                let hinet = URL(string: eeee)
-//                let data = try? Data(contentsOf: hinet!)
-//                let image: UIImage = UIImage(data: data!)!
-//                xxx.append(image)
-//            }
-//
-//           let hinet2 = URL(string: rrr[1])
-//            let data2 = try? Data(contentsOf: hinet2!)
-//            let image2: UIImage = UIImage(data: data2!)!
-//            xxx.append(image2)
-//
-            
-            
-            
-            
-            
 
-     
-        
-            
-       
             
         
         else if indexPath.section == 1 {
@@ -101,11 +78,11 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
             var imageArray: [UIImage] = []
             for image in section1ScholImage {
                 let url = URL(string:image as! String)
-                //            1.訪問網址 根據indexPath.item 取出圖片網址
+             
                 let data = try? Data(contentsOf: url!)
-                //            2.訪問取得data
+              
                 let image: UIImage = UIImage(data: data!)!
-                //            3.將data轉成UIImage
+              
                 imageArray.append(image)
             }
             cell?.images = imageArray

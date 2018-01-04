@@ -27,7 +27,7 @@ class MyCollectionViewCell1: UICollectionViewCell,UICollectionViewDataSource,UIC
         
         switch indexPath.section{
         case 0:
-            print("11 This item is in the first row")
+            print("11 This item is in the second row")
             
             
             
