@@ -10,14 +10,20 @@ import UIKit
 
 class TwoViewController: UIViewController {
 
+    var myValue:Int!
+    
+    @IBOutlet weak var label1: UILabel!
+    
     @IBAction func nextButton(_ sender: UIButton) {
     }
     @IBAction func backButton(_ sender: UIButton) {
+        self.dismiss(animated: true, completion: nil)
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        label1.text = "第"+String(myValue)+"張圖:"
         // Do any additional setup after loading the view.
     }
 

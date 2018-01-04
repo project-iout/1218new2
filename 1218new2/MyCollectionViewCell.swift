@@ -9,7 +9,14 @@
 import UIKit
 
 class MyCollectionViewCell: UICollectionViewCell,UICollectionViewDataSource,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout {
+    
+    var myViewController: ViewController!
+
+    
     @IBOutlet var frViewController: UIView!
+    
+    
+    
     var images:[UIImage]?{
         didSet{
             //do something here ,   cell.insideCollectionView.reloadData()
@@ -36,14 +43,19 @@ class MyCollectionViewCell: UICollectionViewCell,UICollectionViewDataSource,UICo
     @IBAction func pageControl(_ sender: UIPageControl) {
     }
     func collectionView(_ collectionView: UICollectionView, shouldSelectItemAt indexPath: IndexPath) -> Bool {
-        print(print)
+        print(indexPath.item)
         print(indexPath.section)
         
         
-//        
-//                    let vc = TwoViewController(nibName: "TwoViewController", bundle: nil)
-//        print (navigationController)
-//      navigationController?.pushViewController(vc, animated: true)
+        if var topController = UIApplication.shared.keyWindow?.rootViewController {
+            while let presentedViewController = topController.presentedViewController {
+                topController = presentedViewController
+            }
+            let vc = TwoViewController(nibName: "TwoViewController", bundle: nil)
+            vc.myValue = indexPath.item
+            topController.present(vc, animated: true, completion: nil)
+        }
+
         
         switch indexPath.section{
         case 0:
@@ -74,6 +86,9 @@ class MyCollectionViewCell: UICollectionViewCell,UICollectionViewDataSource,UICo
         insideCollectionView.register(UINib(nibName: "ImageCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "displayedImageCell")
         insideCollectionView.delegate  = self
         insideCollectionView.dataSource = self
+        
+       
+        
     }
 
 }
