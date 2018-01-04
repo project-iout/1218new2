@@ -18,9 +18,8 @@
                 <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="Qd8-D4-TXr">
+                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="Qd8-D4-TXr">
                         <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="0.0" id="0c4-uR-5TR">
                             <size key="itemSize" width="50" height="50"/>
@@ -28,17 +27,29 @@
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
-                        <connections>
-                            <outlet property="dataSource" destination="-1" id="Vov-Ee-OZL"/>
-                            <outlet property="delegate" destination="-1" id="Tk9-rn-S0K"/>
-                        </connections>
                     </collectionView>
+                    <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" hidesForSinglePage="YES" defersCurrentPageDisplay="YES" numberOfPages="4" translatesAutoresizingMaskIntoConstraints="NO" id="mcf-ho-W3D">
+                        <rect key="frame" x="-2" y="13" width="55" height="37"/>
+                        <color key="pageIndicatorTintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <connections>
+                            <action selector="pageControl:" destination="-1" eventType="valueChanged" id="ceC-58-8UP"/>
+                        </connections>
+                    </pageControl>
                 </subviews>
             </view>
+            <constraints>
+                <constraint firstItem="Qd8-D4-TXr" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="XWi-I6-aIQ"/>
+                <constraint firstItem="Qd8-D4-TXr" firstAttribute="centerX" secondItem="mcf-ho-W3D" secondAttribute="centerX" id="cI5-9i-mNf"/>
+                <constraint firstItem="Qd8-D4-TXr" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="cXP-iM-j8Q"/>
+                <constraint firstItem="mcf-ho-W3D" firstAttribute="bottom" secondItem="Qd8-D4-TXr" secondAttribute="bottom" id="pBj-Fb-WIm"/>
+                <constraint firstAttribute="bottom" secondItem="Qd8-D4-TXr" secondAttribute="bottom" id="wiO-Kr-nfU"/>
+                <constraint firstAttribute="trailing" secondItem="Qd8-D4-TXr" secondAttribute="trailing" id="ww7-Kk-ApS"/>
+            </constraints>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <connections>
                 <outlet property="insideCollectionView" destination="Qd8-D4-TXr" id="VxF-dK-8SA"/>
             </connections>
+            <point key="canvasLocation" x="15" y="78"/>
         </collectionViewCell>
     </objects>
 </document>

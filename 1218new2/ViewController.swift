@@ -49,6 +49,8 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
                 cell?.myCellSize = CGSize(width: 265, height: 180)
             
             var imageArray: [UIImage] = []
+            var myLableNameArray:[String] = []
+            
 //            宣告變數UIImage陣列並命名為imageArray
             for xxx in section1ScholImage {
 //                設定名為xxx的迴圈在golbal variable (section1ScholImage）中取出被塞入的圖片)
@@ -60,20 +62,34 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
                 //            宣告image並存入data
                 imageArray.append(image)
 //                將image放入imageArray
+                
+                myLableNameArray.append(xxx as! String)
             }
             
             cell?.images = imageArray
 //            將imageArray放入cell裡頭
             cell?.insideCollectionView.reloadData()
 //            reloadData
+            
+            cell?.lableName = myLableNameArray
+
+//
+//            let navigationController = UINavigationController(rootViewController: self)
+//
+//            cell?.navigationController = navigationController
+//
             return cell!
         }
 
             
         
         else if indexPath.section == 1 {
+            
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "BBBB", for: indexPath) as? MyCollectionViewCell1
-
+           
+     
+            
+            
             cell?.myCellSize = CGSize(width: 180, height: 160)
             var imageArray: [UIImage] = []
             for image in section1ScholImage {

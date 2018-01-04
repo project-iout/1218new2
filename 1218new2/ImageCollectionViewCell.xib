@@ -21,21 +21,21 @@
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1" translatesAutoresizingMaskIntoConstraints="NO" id="m8x-gf-Dat">
                         <rect key="frame" x="15" y="0.0" width="35" height="50"/>
                     </imageView>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E1D-wJ-fS7">
-                        <rect key="frame" x="-6" y="20" width="77" height="30"/>
-                        <state key="normal" title="點我看更多"/>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K0I-Mu-aTt">
+                        <rect key="frame" x="4" y="0.0" width="46" height="30"/>
+                        <state key="normal" title="Button"/>
                     </button>
                 </subviews>
             </view>
             <constraints>
+                <constraint firstItem="K0I-Mu-aTt" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="Ff1-gM-SG8"/>
                 <constraint firstItem="m8x-gf-Dat" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="15" id="GFq-c6-f4U"/>
                 <constraint firstAttribute="trailing" secondItem="m8x-gf-Dat" secondAttribute="trailing" id="GeZ-S4-XBn"/>
                 <constraint firstItem="m8x-gf-Dat" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="USb-eT-N5L"/>
                 <constraint firstItem="m8x-gf-Dat" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="15" id="Whh-Rj-oAR"/>
+                <constraint firstAttribute="trailing" secondItem="K0I-Mu-aTt" secondAttribute="trailing" id="b22-sE-kyW"/>
                 <constraint firstItem="m8x-gf-Dat" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="geT-gH-NeM"/>
                 <constraint firstAttribute="bottom" secondItem="m8x-gf-Dat" secondAttribute="bottom" id="hSm-yv-Lfu"/>
-                <constraint firstItem="E1D-wJ-fS7" firstAttribute="centerX" secondItem="m8x-gf-Dat" secondAttribute="centerX" id="k9l-ep-fVy"/>
-                <constraint firstAttribute="bottom" secondItem="E1D-wJ-fS7" secondAttribute="bottom" id="rXm-bh-HkI"/>
                 <constraint firstAttribute="bottom" secondItem="m8x-gf-Dat" secondAttribute="bottom" id="ubH-lK-PTI"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>

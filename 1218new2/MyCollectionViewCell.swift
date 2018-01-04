@@ -9,12 +9,17 @@
 import UIKit
 
 class MyCollectionViewCell: UICollectionViewCell,UICollectionViewDataSource,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout {
+    @IBOutlet var frViewController: UIView!
     var images:[UIImage]?{
         didSet{
             //do something here ,   cell.insideCollectionView.reloadData()
         }
     }
     var myCellSize:CGSize?
+    
+     var navigationController: UINavigationController?
+    
+    var lableName:[String]?
    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return (images?.count)!
@@ -28,9 +33,17 @@ class MyCollectionViewCell: UICollectionViewCell,UICollectionViewDataSource,UICo
         return cell!
     }
     
+    @IBAction func pageControl(_ sender: UIPageControl) {
+    }
     func collectionView(_ collectionView: UICollectionView, shouldSelectItemAt indexPath: IndexPath) -> Bool {
-        print(indexPath)
+        print(print)
         print(indexPath.section)
+        
+        
+//        
+//                    let vc = TwoViewController(nibName: "TwoViewController", bundle: nil)
+//        print (navigationController)
+//      navigationController?.pushViewController(vc, animated: true)
         
         switch indexPath.section{
         case 0:
@@ -45,7 +58,8 @@ class MyCollectionViewCell: UICollectionViewCell,UICollectionViewDataSource,UICo
     }
     
     
-
+ 
+    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
         

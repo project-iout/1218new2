@@ -16,6 +16,9 @@ class MyCollectionViewCell2: UICollectionViewCell,UICollectionViewDataSource,UIC
     }
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         print("CCC")
+        
+        
+        
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "displayedImageCell", for: indexPath) as? ImageCollectionViewCell
         
         cell?.displayedImage.image = images?[indexPath.item]
@@ -28,8 +31,7 @@ class MyCollectionViewCell2: UICollectionViewCell,UICollectionViewDataSource,UIC
         switch indexPath.section{
         case 0:
             print("This item is in the third row")
-            
-            
+      
             
         default:
             print("This is wrong")
