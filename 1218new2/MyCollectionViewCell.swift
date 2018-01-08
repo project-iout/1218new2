@@ -12,6 +12,7 @@ class MyCollectionViewCell: UICollectionViewCell,UICollectionViewDataSource,UICo
     
     var myViewController: ViewController!
 
+    @IBOutlet weak var pageControl: UIPageControl!
     
     @IBOutlet var frViewController: UIView!
     
