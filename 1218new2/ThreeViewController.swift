@@ -1,32 +1,33 @@
 //
-//  TwoViewController.swift
+//  ThreeViewController.swift
 //  1218new2
 //
-//  Created by Yu-Liang Chou  on 2018/1/4.
+//  Created by Yu-Liang Chou  on 2018/1/8.
 //  Copyright © 2018年 aa. All rights reserved.
 //
 
 import UIKit
 
-class TwoViewController: UIViewController {
+class ThreeViewController: UIViewController {
 
-    var myValue:Int!
-    
-    @IBOutlet weak var label1: UILabel!
- 
-    @IBOutlet var myWebview: UIWebView!
-    
-    @IBAction func nextButton(_ sender: UIButton) {
+    var myValue2:Int!
+    @IBOutlet var myWebview2: UIWebView!
+    @IBOutlet var label2: UILabel!
+    @IBAction func backButton2(_ sender: UIButton) {
     }
-    @IBAction func backButton(_ sender: UIButton) {
-        self.dismiss(animated: true, completion: nil)
+    @IBAction func nextButton2(_ sender: UIButton) {
     }
-    
+   
+    var visitThisURL:String?
     override func viewDidLoad() {
         super.viewDidLoad()
-        let url = URL(string: "https://www.ioutback.com")
-        myWebview.loadRequest(URLRequest(url: url!))
-        label1.text = "第"+String(myValue)+"張圖:"
+      
+            if let url = visitThisURL{
+                let urlObject = URL(string: url)
+                myWebview2.loadRequest(URLRequest(url: urlObject!))
+            
+        }
+        label2.text = "第"+String(myValue2)+"張圖片:"
         // Do any additional setup after loading the view.
     }
 
