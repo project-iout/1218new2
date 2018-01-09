@@ -12,11 +12,11 @@ class MyCollectionViewCell: UICollectionViewCell,UICollectionViewDataSource,UICo
     
     var myViewController: ViewController!
 
+//    @IBOutlet var myPage: UIPageControl!
     @IBOutlet weak var pageControl: UIPageControl!
-    
-    @IBOutlet var frViewController: UIView!
-    
-    
+
+//    var timer : Timer!
+//    var updateCounter : Int!
     
     var images:[UIImage]?{
         didSet{
@@ -25,7 +25,7 @@ class MyCollectionViewCell: UICollectionViewCell,UICollectionViewDataSource,UICo
     }
     var myCellSize:CGSize?
     
-     var navigationController: UINavigationController?
+    var navigationController: UINavigationController?
     
     var lableName:[String]?
    
@@ -41,8 +41,7 @@ class MyCollectionViewCell: UICollectionViewCell,UICollectionViewDataSource,UICo
         return cell!
     }
     
-    @IBAction func pageControl(_ sender: UIPageControl) {
-    }
+  
     func collectionView(_ collectionView: UICollectionView, shouldSelectItemAt indexPath: IndexPath) -> Bool {
         print(indexPath.item)
         print(indexPath.section)

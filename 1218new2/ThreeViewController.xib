@@ -29,7 +29,7 @@
                                 <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="LPm-Rt-prz">
                                     <rect key="frame" x="16" y="7" width="83" height="30"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <state key="normal" title="Button"/>
+                                    <state key="normal" title="Next"/>
                                     <connections>
                                         <action selector="nextButton2:" destination="-1" eventType="touchUpInside" id="yeB-1k-OP3"/>
                                     </connections>
@@ -39,7 +39,7 @@
                                 <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="rx9-aB-nIW">
                                     <rect key="frame" x="276" y="7" width="83" height="30"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <state key="normal" title="Button"/>
+                                    <state key="normal" title="Back"/>
                                     <connections>
                                         <action selector="backButton2:" destination="-1" eventType="touchUpInside" id="DgO-u5-iRM"/>
                                     </connections>
