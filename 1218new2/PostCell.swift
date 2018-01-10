@@ -27,9 +27,9 @@ class PostCell : UITableViewCell
     
     func updateUI()
     {
-        profileImageView.image = post.createdBy.profileImage
-        usernameLabel.text = post.createdBy.username
-        timeAgoLabel.text = post.timeAgo
+//        profileImageView.image = post.createdBy!.profileImage
+//        usernameLabel.text = post.createdBy!.username
+//        timeAgoLabel.text = post.timeAgo
         captionLabel.text = post.caption
         postImageView.image = post.image
         postStatsLabel.text = "\(post.numberOfLikes!) Likes     \(post.numberOfComments!) Comments     \(post.numberOfShares!) Shares"

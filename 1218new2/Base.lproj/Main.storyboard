@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13770" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="79e-Fs-Ap9">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="79e-Fs-Ap9">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13770"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -253,12 +253,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="11" translatesAutoresizingMaskIntoConstraints="NO" id="t2w-af-Y0L">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="11" translatesAutoresizingMaskIntoConstraints="NO" id="t2w-af-Y0L">
                                 <rect key="frame" x="0.0" y="189" width="375" height="204"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="204" id="aWV-Gb-mKv"/>
+                                </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iQT-SR-dCW">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iQT-SR-dCW">
                                 <rect key="frame" x="16" y="117" width="99" height="64"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                                 <state key="normal" title="Back"/>
                                 <connections>
@@ -269,7 +271,12 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="t2w-af-Y0L" firstAttribute="trailing" secondItem="TH6-10-rFr" secondAttribute="trailing" id="46E-Sp-Su1"/>
+                            <constraint firstItem="t2w-af-Y0L" firstAttribute="top" secondItem="iQT-SR-dCW" secondAttribute="bottom" constant="8" symbolic="YES" id="Aeh-Vy-8Qr"/>
+                            <constraint firstItem="TH6-10-rFr" firstAttribute="bottom" secondItem="t2w-af-Y0L" secondAttribute="bottom" constant="230" id="GTL-j3-WUy"/>
+                            <constraint firstItem="iQT-SR-dCW" firstAttribute="leading" secondItem="9bn-0I-in4" secondAttribute="leadingMargin" id="HCr-Ye-ZhO"/>
+                            <constraint firstItem="TH6-10-rFr" firstAttribute="trailing" secondItem="iQT-SR-dCW" secondAttribute="trailing" constant="260" id="lT3-Uu-ICX"/>
                             <constraint firstItem="t2w-af-Y0L" firstAttribute="leading" secondItem="TH6-10-rFr" secondAttribute="leading" id="tod-XQ-baB"/>
+                            <constraint firstItem="iQT-SR-dCW" firstAttribute="top" secondItem="TH6-10-rFr" secondAttribute="top" constant="97" id="ve9-3d-UXf"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="TH6-10-rFr"/>
                     </view>
@@ -352,7 +359,6 @@
         <image name="Globe" width="225" height="225"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="PPK-9g-yQE"/>
         <segue reference="XJO-aB-6Mn"/>
     </inferredMetricsTieBreakers>
 </document>

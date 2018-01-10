@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		40131BAD2005BC840052B887 /* ThreeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40131BAB2005BC840052B887 /* ThreeViewController.swift */; };
+		40131BAE2005BC840052B887 /* ThreeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 40131BAC2005BC840052B887 /* ThreeViewController.xib */; };
 		4013A16C1FE77F9000F3AD89 /* MyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4013A16A1FE77F9000F3AD89 /* MyCollectionViewCell.swift */; };
 		4013A16D1FE77F9000F3AD89 /* MyCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4013A16B1FE77F9000F3AD89 /* MyCollectionViewCell.xib */; };
 		4013A1701FE785A800F3AD89 /* ImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4013A16E1FE785A800F3AD89 /* ImageCollectionViewCell.swift */; };
@@ -38,6 +40,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		40131BAB2005BC840052B887 /* ThreeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreeViewController.swift; sourceTree = "<group>"; };
+		40131BAC2005BC840052B887 /* ThreeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ThreeViewController.xib; sourceTree = "<group>"; };
 		4013A16A1FE77F9000F3AD89 /* MyCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCollectionViewCell.swift; sourceTree = "<group>"; };
 		4013A16B1FE77F9000F3AD89 /* MyCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyCollectionViewCell.xib; sourceTree = "<group>"; };
 		4013A16E1FE785A800F3AD89 /* ImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -108,6 +112,8 @@
 				40EBE7ED1FE770E100F7EA42 /* Assets.xcassets */,
 				40EBE7EF1FE770E100F7EA42 /* LaunchScreen.storyboard */,
 				40EBE7F21FE770E100F7EA42 /* Info.plist */,
+				40131BAB2005BC840052B887 /* ThreeViewController.swift */,
+				40131BAC2005BC840052B887 /* ThreeViewController.xib */,
 				4013A16A1FE77F9000F3AD89 /* MyCollectionViewCell.swift */,
 				4013A16B1FE77F9000F3AD89 /* MyCollectionViewCell.xib */,
 				40D92C831FE928D90073647C /* MyCollectionViewCell1.swift */,
@@ -193,6 +199,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4042CC751FEA13350009B912 /* MyCollectionViewCell2.xib in Resources */,
+				40131BAE2005BC840052B887 /* ThreeViewController.xib in Resources */,
 				4013A1791FE7914800F3AD89 /* MyFooterView.xib in Resources */,
 				40EBE7F11FE770E100F7EA42 /* LaunchScreen.storyboard in Resources */,
 				40164C271FF0979000720F21 /* MyCollectionViewCell4.xib in Resources */,
@@ -226,6 +233,7 @@
 				40D92C851FE928D90073647C /* MyCollectionViewCell1.swift in Sources */,
 				4042CC801FEB9F520009B912 /* MyTableViewCell.swift in Sources */,
 				4042CC741FEA13350009B912 /* MyCollectionViewCell2.swift in Sources */,
+				40131BAD2005BC840052B887 /* ThreeViewController.swift in Sources */,
 				4013A1701FE785A800F3AD89 /* ImageCollectionViewCell.swift in Sources */,
 				40164C261FF0979000720F21 /* MyCollectionViewCell4.swift in Sources */,
 				4013A16C1FE77F9000F3AD89 /* MyCollectionViewCell.swift in Sources */,

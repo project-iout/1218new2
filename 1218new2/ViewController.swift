@@ -62,10 +62,8 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
                 //            宣告image並存入data
                 imageArray.append(image)
 //                將image放入imageArray
-                
                 myLableNameArray.append(xxx as! String)
             }
-            
             cell?.images = imageArray
 //            將imageArray放入cell裡頭
             cell?.insideCollectionView.reloadData()

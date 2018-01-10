@@ -25,7 +25,7 @@ class MyCollectionViewCell: UICollectionViewCell,UICollectionViewDataSource,UICo
     }
     var myCellSize:CGSize?
     
-     var navigationController: UINavigationController?
+    var navigationController: UINavigationController?
     
     var lableName:[String]?
    

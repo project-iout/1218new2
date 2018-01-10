@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ThreeViewController" customModule="_218new2" customModuleProvider="target">
+            <connections>
+                <outlet property="label1" destination="AlK-Ux-8RT" id="jP8-Pt-QtK"/>
+                <outlet property="myWebview1" destination="FKQ-TE-NdO" id="qmt-iv-flc"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yWo-aY-4ZJ">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                    <items>
+                        <navigationItem title="Title" id="pml-wH-O56">
+                            <barButtonItem key="leftBarButtonItem" style="plain" id="9dd-Qc-t7e">
+                                <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="jZ8-XR-8mc">
+                                    <rect key="frame" x="16" y="7" width="83" height="30"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <state key="normal" title="GO"/>
+                                </button>
+                                <connections>
+                                    <action selector="nextButton1:" destination="-1" id="Qtc-up-5bU"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem key="rightBarButtonItem" style="plain" id="gmG-Hf-zlO">
+                                <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="6JK-Q4-19N">
+                                    <rect key="frame" x="276" y="7" width="83" height="30"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <state key="normal" title="BACK"/>
+                                </button>
+                                <connections>
+                                    <action selector="backButton1:" destination="-1" id="Q8c-8o-AVo"/>
+                                </connections>
+                            </barButtonItem>
+                        </navigationItem>
+                    </items>
+                </navigationBar>
+                <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FKQ-TE-NdO">
+                    <rect key="frame" x="0.0" y="44" width="375" height="603"/>
+                    <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                </webView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AlK-Ux-8RT">
+                    <rect key="frame" x="0.0" y="646" width="375" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="FKQ-TE-NdO" firstAttribute="leading" secondItem="yWo-aY-4ZJ" secondAttribute="leading" id="4HW-1j-Pac"/>
+                <constraint firstItem="FKQ-TE-NdO" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="517-V6-gW2"/>
+                <constraint firstItem="FKQ-TE-NdO" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Cs5-S6-nRO"/>
+                <constraint firstItem="FKQ-TE-NdO" firstAttribute="top" secondItem="yWo-aY-4ZJ" secondAttribute="bottom" id="D5R-g4-2z7"/>
+                <constraint firstItem="AlK-Ux-8RT" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="DN8-hy-8w4"/>
+                <constraint firstItem="FKQ-TE-NdO" firstAttribute="leading" secondItem="AlK-Ux-8RT" secondAttribute="leading" id="Fd6-KK-sMG"/>
+                <constraint firstAttribute="bottom" secondItem="FKQ-TE-NdO" secondAttribute="bottom" constant="20" symbolic="YES" id="M6R-h0-ffb"/>
+                <constraint firstItem="FKQ-TE-NdO" firstAttribute="trailing" secondItem="AlK-Ux-8RT" secondAttribute="trailing" id="R9H-wa-fvM"/>
+                <constraint firstItem="yWo-aY-4ZJ" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="ZCt-Fn-ZlA"/>
+                <constraint firstItem="FKQ-TE-NdO" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="c5H-NF-cYy"/>
+                <constraint firstItem="FKQ-TE-NdO" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="ecM-8m-DnK"/>
+                <constraint firstItem="FKQ-TE-NdO" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="nLT-io-ftc"/>
+                <constraint firstItem="FKQ-TE-NdO" firstAttribute="top" secondItem="yWo-aY-4ZJ" secondAttribute="bottom" id="oLy-GC-wPu"/>
+                <constraint firstItem="FKQ-TE-NdO" firstAttribute="trailing" secondItem="yWo-aY-4ZJ" secondAttribute="trailing" id="s4l-KY-GYW"/>
+                <constraint firstItem="FKQ-TE-NdO" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="uxb-Eo-acb"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="49.5" y="60.5"/>
+        </view>
+    </objects>
+</document>

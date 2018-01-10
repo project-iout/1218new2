@@ -12,12 +12,13 @@ class NewsfeedTableViewController : UITableViewController
 {
     var searchController: UISearchController!
     var posts: [Post]?
-    
+//    宣告一個叫做posts 的array變數
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.setupSearchController()
         self.fetchPosts()
+//        先執行這兩個方法
         
         tableView.separatorStyle = .none
         
@@ -28,10 +29,61 @@ class NewsfeedTableViewController : UITableViewController
     
     func fetchPosts()
     {
-        self.posts = Post.fetchPosts()
-        tableView.reloadData()
+        
+        var results:[String]?
+//        宣告一個變數字串陣列名為 results
+        let urlString = "https://www.ioutback.com/api/wall/top20"
+//        宣告一個常數字串名為urlString
+        let url = URL(string: urlString)
+//        宣告一個url 並存入網址string
+        URLSession.shared.dataTask(with: url!){(data, response, error) in
+            if error != nil {
+                print(error as Any)
+            } else {
+                do{
+                    let parsedData = try JSONSerialization.jsonObject(with: data!) as! [String:Any]
+                    //                    宣告parsedData將data轉型為string array
+                    results = (parsedData["wall"] as! [String])
+                    //                    宣告postArray 將取出來的陣列wall 轉型為NSarray
+                    
+                    
+                    
+                    //                    塞值
+                    self.dataFetched(results!)
+                } catch let error as NSError {
+                    print(error)
+                }
+            }
+            
+            }.resume()
+        
+        
     }
-    
+    func dataFetched(_ results:[String]){
+        var posts = [Post]()
+//        宣告一個名稱為posts的變數 並塞入post陣列架構, () 代表這個post可以是任意的數量
+        for item in results{
+//            從results這個陣列裡取出item
+            var newPost = Post()
+//            宣告一個名為newPost的Post物件,這個物件會以我在post.swift宣告的struct為基本架構 根據輸入的值而改變其內容
+            newPost.caption = item
+//            將取得的item存在名為newPost的Post物件
+            newPost.numberOfComments = 2000
+            newPost.numberOfLikes = 1
+            newPost.numberOfShares = 5
+            newPost.image = UIImage(named: "0")
+            posts.append(newPost)
+        }
+        
+        self.posts = posts
+//        將local var 的post 丟回gobal var 的post
+        DispatchQueue.main.async {
+//          將畫面變動交給主要執行緒
+            self.tableView.reloadData()
+//            重新run下面的方法
+        }
+        
+    }
     func setupSearchController()
     {
         searchController = UISearchController(searchResultsController: nil)
@@ -57,12 +109,21 @@ extension NewsfeedTableViewController
         }
     }
     
+    override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        let lastItem = posts?.count
+        if indexPath.row == lastItem{
+        }
+    print("This is the ned")
+    }
+
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "PostCell", for: indexPath) as! PostCell
         
         cell.post = self.posts?[indexPath.row]
         
         return cell
+    
     }
 }
 
