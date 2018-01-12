@@ -28,7 +28,6 @@ class NewsfeedTableViewController : UITableViewController
     
     func fetchPosts()
     {
-        var results:[String]?
 //        宣告一個變數字串陣列名為 results
         let urlString = "https://www.ioutback.com/api/wall/top20"
 //        宣告一個常數字串名為urlString
@@ -39,25 +38,32 @@ class NewsfeedTableViewController : UITableViewController
                 print(error as Any)
             } else {
                 do{
-                    let parsedData:[String : AnyObject] = try JSONSerialization.jsonObject(with: data!) as! Dictionary
+                    let parsedData = try JSONSerialization.jsonObject(with: data!) as! [String:Any]
+                    
+//                    let parsedData = try JSONSerialization.jsonObject(with: data!) as! String
 //                    宣告parsedData將data轉型為string array
-                    results = parsedData["wall"] as? [String]
+                    
+                    let results = parsedData["wall"] as! NSArray
+                    
 //                    宣告postArray 將取出來的陣列wall 轉型為NSarray 塞值
-                    self.dataFetched(results!)
+                    self.dataFetched(results)
                 } catch let error as NSError {
                     print(error)
                 }
             }
             }.resume()
     }
-    func dataFetched(_ results:[String]){
+    func dataFetched(_ results:NSArray){
         var posts = [Post]()
 //        宣告一個名稱為posts的變數 並塞入post陣列架構, () 代表這個post可以是任意的數量
         for item in results{
 //            從results這個陣列裡取出item
             var newPost = Post()
+            
+            let dicItem = item as! NSDictionary
+            newPost.caption = dicItem["text"] as! String
 //            宣告一個名為newPost的Post物件,這個物件會以我在post.swift宣告的struct為基本架構 根據輸入的值而改變其內容
-            newPost.caption = item
+//            newPost.caption = item
 //            將取得的item存在名為newPost的Post物件
             newPost.numberOfComments = 2000
             newPost.numberOfLikes = 1
