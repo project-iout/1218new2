@@ -35,6 +35,4 @@ class PostCell : UITableViewCell
         postStatsLabel.text = "\(post.numberOfLikes!) Likes     \(post.numberOfComments!) Comments     \(post.numberOfShares!) Shares"
     }
     
-    
-    
 }

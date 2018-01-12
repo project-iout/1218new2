@@ -18,7 +18,6 @@ struct Post
     var numberOfComments: Int?
     var numberOfShares: Int?
 
-
 }
 
 struct User
@@ -26,3 +25,5 @@ struct User
     var username: String?
     var profileImage: UIImage?
 }
+
+
