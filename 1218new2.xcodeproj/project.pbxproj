@@ -23,7 +23,7 @@
 		4042CC751FEA13350009B912 /* MyCollectionViewCell2.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4042CC731FEA13350009B912 /* MyCollectionViewCell2.xib */; };
 		4042CC801FEB9F520009B912 /* MyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4042CC7E1FEB9F520009B912 /* MyTableViewCell.swift */; };
 		4042CC811FEB9F520009B912 /* MyTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4042CC7F1FEB9F520009B912 /* MyTableViewCell.xib */; };
-		4066E881200CA3D700508856 /* PostContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4066E880200CA3D700508856 /* PostContent.swift */; };
+		4066E881200CA3D700508856 /* PostContentController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4066E880200CA3D700508856 /* PostContentController.swift */; };
 		4066E884200CB57F00508856 /* MytableViewCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4066E882200CB57F00508856 /* MytableViewCellTableViewCell.swift */; };
 		4066E885200CB57F00508856 /* MytableViewCellTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4066E883200CB57F00508856 /* MytableViewCellTableViewCell.xib */; };
 		40AC58241FF0F89200B08F6E /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40AC58231FF0F89200B08F6E /* PostCell.swift */; };
@@ -59,7 +59,7 @@
 		4042CC731FEA13350009B912 /* MyCollectionViewCell2.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyCollectionViewCell2.xib; sourceTree = "<group>"; };
 		4042CC7E1FEB9F520009B912 /* MyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTableViewCell.swift; sourceTree = "<group>"; };
 		4042CC7F1FEB9F520009B912 /* MyTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyTableViewCell.xib; sourceTree = "<group>"; };
-		4066E880200CA3D700508856 /* PostContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PostContent.swift; path = ../PostContent.swift; sourceTree = "<group>"; };
+		4066E880200CA3D700508856 /* PostContentController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PostContentController.swift; path = ../PostContentController.swift; sourceTree = "<group>"; };
 		4066E882200CB57F00508856 /* MytableViewCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MytableViewCellTableViewCell.swift; sourceTree = "<group>"; };
 		4066E883200CB57F00508856 /* MytableViewCellTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MytableViewCellTableViewCell.xib; sourceTree = "<group>"; };
 		40AC58231FF0F89200B08F6E /* PostCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
@@ -139,7 +139,7 @@
 				4013A1761FE7914800F3AD89 /* MyFooterView.swift */,
 				4013A1771FE7914800F3AD89 /* MyFooterView.xib */,
 				40ACBA1B1FF102AB00C85A72 /* Post.swift */,
-				4066E880200CA3D700508856 /* PostContent.swift */,
+				4066E880200CA3D700508856 /* PostContentController.swift */,
 				40AC58231FF0F89200B08F6E /* PostCell.swift */,
 				40ACBA1D1FF10EDC00C85A72 /* NewsFeedTableViewController.swift */,
 				4066E882200CB57F00508856 /* MytableViewCellTableViewCell.swift */,
@@ -232,7 +232,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4066E881200CA3D700508856 /* PostContent.swift in Sources */,
+				4066E881200CA3D700508856 /* PostContentController.swift in Sources */,
 				4066E884200CB57F00508856 /* MytableViewCellTableViewCell.swift in Sources */,
 				40AE3B031FEEA1AB006A99D4 /* MyCollectionViewCell3.swift in Sources */,
 				4013A1741FE78DCA00F3AD89 /* MyHeaderView.swift in Sources */,
