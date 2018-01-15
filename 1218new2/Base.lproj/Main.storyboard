@@ -194,10 +194,10 @@
             </objects>
             <point key="canvasLocation" x="2310" y="-1314"/>
         </scene>
-        <!--Post Content-->
+        <!--Post Content Controller-->
         <scene sceneID="A1c-mI-0gj">
             <objects>
-                <tableViewController id="fub-2u-GSO" customClass="PostContent" customModule="_218new2" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="fub-2u-GSO" customClass="PostContentController" customModule="_218new2" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Gz5-ZT-045" customClass="PostConent">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
