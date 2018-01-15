@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class PostContent: UITableViewController{
+class PostContentController: UITableViewController{
 
 
     
