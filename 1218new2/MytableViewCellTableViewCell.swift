@@ -13,7 +13,8 @@ class MytableViewCellTableViewCell: UITableViewCell {
     @IBOutlet var profilePhoto: UIImageView!
     @IBOutlet var userName1: UILabel!
     
-    @IBOutlet var PostContent: UILabel!
+    @IBOutlet var PostContent: UITextView!
+    
     
     @IBOutlet var postCell1: UIView!
     
@@ -23,8 +24,17 @@ class MytableViewCellTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-    }
 
+        PostContent.text = "Type in here"
+        PostContent.autocapitalizationType = UITextAutocapitalizationType.allCharacters
+        PostContent.inputAccessoryView = UITextView()
+    }
+    
+  
+    
+
+    
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
