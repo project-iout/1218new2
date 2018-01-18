@@ -5,7 +5,6 @@
     </device>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -19,104 +18,95 @@
                 <rect key="frame" x="0.0" y="0.0" width="361" height="646.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Leon Chou" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DCe-HB-1BT">
-                        <rect key="frame" x="99" y="47" width="97" height="23"/>
-                        <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
-                        <nil key="textColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="4" translatesAutoresizingMaskIntoConstraints="NO" id="opl-xT-tSh">
-                        <rect key="frame" x="24" y="47" width="71" height="65"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="65" id="MDQ-jn-cfa"/>
-                            <constraint firstAttribute="width" constant="71" id="MO6-1s-1zj"/>
-                        </constraints>
-                    </imageView>
                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" contentInsetAdjustmentBehavior="scrollableAxes" translatesAutoresizingMaskIntoConstraints="NO" id="4Bx-Ev-W7v">
-                        <rect key="frame" x="8" y="106" width="348" height="310"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                        <rect key="frame" x="6" y="61" width="348" height="115"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
                         <connections>
                             <outlet property="delegate" destination="-1" id="W0c-u9-BGN"/>
                             <outlet property="textDragDelegate" destination="-1" id="dLA-zX-VCk"/>
                         </connections>
                     </textView>
-                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oaS-G0-NQp">
-                        <rect key="frame" x="0.0" y="426" width="361" height="4"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="11" translatesAutoresizingMaskIntoConstraints="NO" id="Map-SZ-abE">
+                        <rect key="frame" x="4" y="184" width="354" height="239"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
+                    </imageView>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="阿基師" translatesAutoresizingMaskIntoConstraints="NO" id="c2u-Oe-zAQ">
+                        <rect key="frame" x="8" y="6" width="66" height="54"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="54" id="cL9-c5-z8K"/>
+                            <constraint firstAttribute="width" constant="66" id="duw-Aw-Wrr"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="阿基師" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y1r-Tc-gmS">
+                        <rect key="frame" x="88" y="6" width="111" height="31"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jgt-Mf-eZp">
+                        <rect key="frame" x="0.0" y="431" width="361" height="3"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                     </view>
-                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ogz-vo-r4H">
-                        <rect key="frame" x="0.0" y="431" width="361" height="52"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="相機" translatesAutoresizingMaskIntoConstraints="NO" id="hiR-Kc-rFJ">
-                                <rect key="frame" x="20" y="0.0" width="48" height="44"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="相片" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K8M-3a-PG6">
-                                <rect key="frame" x="81" y="4" width="54" height="40"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
+                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ryM-9i-iV1">
+                        <rect key="frame" x="0.0" y="438" width="361" height="38"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="K2g-Bt-D4p">
+                        <state key="normal" title="相片"/>
+                        <connections>
+                            <action selector="postCamera:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="Bld-pj-4W2"/>
+                        </connections>
+                    </button>
+                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xsJ-CU-niA">
                         <rect key="frame" x="0.0" y="479" width="361" height="4"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                     </view>
-                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4jM-81-rl3">
-                        <rect key="frame" x="0.0" y="485" width="361" height="52"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="video " translatesAutoresizingMaskIntoConstraints="NO" id="Jy9-gJ-BFi">
-                                <rect key="frame" x="21" y="0.0" width="48" height="44"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="影片" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GE1-Ev-ux3">
-                                <rect key="frame" x="81" y="2" width="54" height="40"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
+                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QYx-ch-4Kw">
+                        <rect key="frame" x="0.0" y="486" width="361" height="40"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    </view>
-                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="m2r-5X-kC6">
-                        <rect key="frame" x="0.0" y="532" width="361" height="4"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                        <state key="normal" title="影片"/>
+                    </button>
+                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zVK-by-O3g">
+                        <rect key="frame" x="0.0" y="541" width="361" height="4"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                     </view>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="相機" translatesAutoresizingMaskIntoConstraints="NO" id="lx5-Lb-9EQ">
+                        <rect key="frame" x="27" y="438" width="47" height="39"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    </imageView>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="video " translatesAutoresizingMaskIntoConstraints="NO" id="pLU-fb-agE">
+                        <rect key="frame" x="27" y="485" width="47" height="39"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    </imageView>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="opl-xT-tSh" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="8" id="9ta-Dk-dzQ"/>
-                    <constraint firstItem="DCe-HB-1BT" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="16" id="CCf-v7-ayT"/>
-                    <constraint firstItem="DCe-HB-1BT" firstAttribute="leading" secondItem="opl-xT-tSh" secondAttribute="trailing" constant="4" id="In4-P3-2QG"/>
-                    <constraint firstItem="opl-xT-tSh" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="16" id="lfp-Fe-kWF"/>
+                    <constraint firstItem="c2u-Oe-zAQ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="Yc8-ie-fpn"/>
+                    <constraint firstItem="c2u-Oe-zAQ" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="6" id="qLn-eD-GQT"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
-                <outlet property="PostContent" destination="4Bx-Ev-W7v" id="crE-9g-Bd6"/>
-                <outlet property="postCell1" destination="Ogz-vo-r4H" id="45T-Jt-620"/>
-                <outlet property="postCell2" destination="4jM-81-rl3" id="BFF-CJ-asM"/>
-                <outlet property="profilePhoto" destination="opl-xT-tSh" id="sHJ-TK-Fy6"/>
-                <outlet property="userName1" destination="DCe-HB-1BT" id="3C5-eX-UrJ"/>
+                <outlet property="PostContent" destination="4Bx-Ev-W7v" id="88z-8K-bZ1"/>
+                <outlet property="PostPhoto" destination="Map-SZ-abE" id="ch4-Tg-Szp"/>
+                <outlet property="profilePhoto" destination="c2u-Oe-zAQ" id="Npx-03-zET"/>
+                <outlet property="userName1" destination="Y1r-Tc-gmS" id="nhw-Zo-ac3"/>
             </connections>
             <point key="canvasLocation" x="51.5" y="314.5"/>
         </tableViewCell>
     </objects>
     <resources>
-        <image name="4" width="276" height="183"/>
+        <image name="11" width="1440" height="900"/>
         <image name="video " width="120" height="120"/>
         <image name="相機" width="120" height="120"/>
+        <image name="阿基師" width="510" height="287"/>
     </resources>
 </document>
