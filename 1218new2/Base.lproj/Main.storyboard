@@ -49,7 +49,7 @@
                             <subviews>
                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5hh-vX-0Fq">
                                     <rect key="frame" x="0.0" y="8" width="375" height="50"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                     <color key="backgroundColor" red="0.93725490570000003" green="0.93725490570000003" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <state key="normal" title="我想發文"/>
                                     <connections>
@@ -222,28 +222,11 @@
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="533.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Pfh-DH-Gd2">
+                                        <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Pfh-DH-Gd2">
                                             <rect key="frame" x="0.0" y="438" width="375" height="9"/>
                                             <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                         </view>
-                                        <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Tbo-8C-dcE">
-                                            <rect key="frame" x="4" y="448" width="367" height="58"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="影片" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qji-y4-p1c">
-                                                    <rect key="frame" x="80" y="0.0" width="147" height="52"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="video " translatesAutoresizingMaskIntoConstraints="NO" id="mH8-vE-7jh">
-                                                    <rect key="frame" x="8" y="8" width="45" height="50"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                </imageView>
-                                            </subviews>
-                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        </view>
-                                        <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="d5b-PM-jf7">
+                                        <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="d5b-PM-jf7">
                                             <rect key="frame" x="-8" y="514" width="375" height="9"/>
                                             <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                         </view>
@@ -262,50 +245,20 @@
                                         </label>
                                         <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jsn-Wm-1MD">
                                             <rect key="frame" x="0.0" y="367" width="359" height="63"/>
-                                            <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="相機" translatesAutoresizingMaskIntoConstraints="NO" id="ua0-27-ain">
-                                                    <rect key="frame" x="16" y="13" width="45" height="50"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="相片" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LPL-qW-bpL">
-                                                    <rect key="frame" x="85" y="13" width="147" height="52"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </view>
-                                        <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="R4K-Vd-ozs">
-                                            <rect key="frame" x="16" y="63" width="343" height="30"/>
-                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                                            <nil key="textColor"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                            <textInputTraits key="textInputTraits"/>
-                                            <connections>
-                                                <outlet property="textDragDelegate" destination="fub-2u-GSO" id="8Cw-T1-s9x"/>
-                                            </connections>
-                                        </textField>
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="vIr-ec-tmd" firstAttribute="leading" secondItem="gN6-cs-HOP" secondAttribute="leadingMargin" id="0bA-fe-zyb"/>
                                         <constraint firstItem="YB4-5V-ec3" firstAttribute="top" secondItem="gN6-cs-HOP" secondAttribute="top" id="4vt-A1-KrZ"/>
                                         <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="YB4-5V-ec3" secondAttribute="trailing" constant="20" symbolic="YES" id="AK5-8K-Flh"/>
-                                        <constraint firstItem="Tbo-8C-dcE" firstAttribute="top" secondItem="gN6-cs-HOP" secondAttribute="top" constant="387" id="HT3-Is-hhm"/>
-                                        <constraint firstAttribute="bottom" secondItem="Tbo-8C-dcE" secondAttribute="bottom" constant="86.5" id="IVb-og-k16"/>
-                                        <constraint firstItem="Tbo-8C-dcE" firstAttribute="centerX" secondItem="Pfh-DH-Gd2" secondAttribute="centerX" id="Ley-3y-E0H"/>
                                         <constraint firstItem="d5b-PM-jf7" firstAttribute="top" secondItem="Pfh-DH-Gd2" secondAttribute="bottom" constant="65" id="M2A-Hm-eFK"/>
                                         <constraint firstItem="Pfh-DH-Gd2" firstAttribute="top" secondItem="gN6-cs-HOP" secondAttribute="top" constant="372" id="Syy-FQ-oSv"/>
-                                        <constraint firstItem="Tbo-8C-dcE" firstAttribute="leading" secondItem="jsn-Wm-1MD" secondAttribute="leading" id="Wsk-hE-Qlu"/>
                                         <constraint firstItem="d5b-PM-jf7" firstAttribute="leading" secondItem="gN6-cs-HOP" secondAttribute="leading" id="ZFC-LJ-Wm9"/>
-                                        <constraint firstItem="Tbo-8C-dcE" firstAttribute="centerX" secondItem="d5b-PM-jf7" secondAttribute="centerX" id="byo-CC-zH8"/>
                                         <constraint firstItem="vIr-ec-tmd" firstAttribute="top" secondItem="YB4-5V-ec3" secondAttribute="top" id="eBn-00-QKG"/>
                                         <constraint firstItem="d5b-PM-jf7" firstAttribute="leading" secondItem="Pfh-DH-Gd2" secondAttribute="leading" id="lmJ-13-1P1"/>
                                         <constraint firstItem="YB4-5V-ec3" firstAttribute="leading" secondItem="vIr-ec-tmd" secondAttribute="trailing" constant="8" id="rES-B8-Zr2"/>
                                         <constraint firstItem="Pfh-DH-Gd2" firstAttribute="top" secondItem="jsn-Wm-1MD" secondAttribute="bottom" constant="1" id="sFM-QL-AWw"/>
-                                        <constraint firstItem="Tbo-8C-dcE" firstAttribute="top" secondItem="Pfh-DH-Gd2" secondAttribute="bottom" constant="6" id="suh-dW-AqV"/>
-                                        <constraint firstItem="Tbo-8C-dcE" firstAttribute="centerX" secondItem="gN6-cs-HOP" secondAttribute="centerX" id="x9K-ag-oxs"/>
                                     </constraints>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -485,8 +438,6 @@
         <image name="24" width="370" height="236"/>
         <image name="4" width="276" height="183"/>
         <image name="Globe" width="225" height="225"/>
-        <image name="video " width="120" height="120"/>
-        <image name="相機" width="120" height="120"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="XJO-aB-6Mn"/>
