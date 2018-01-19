@@ -31,10 +31,6 @@
                             <outlet property="textDragDelegate" destination="-1" id="dLA-zX-VCk"/>
                         </connections>
                     </textView>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="11" translatesAutoresizingMaskIntoConstraints="NO" id="Map-SZ-abE">
-                        <rect key="frame" x="3" y="205" width="354" height="357"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
-                    </imageView>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="阿基師" translatesAutoresizingMaskIntoConstraints="NO" id="c2u-Oe-zAQ">
                         <rect key="frame" x="8" y="6" width="66" height="54"/>
                         <constraints>
@@ -80,6 +76,19 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                     </view>
+                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Pu-m7-z9N">
+                        <rect key="frame" x="298" y="13" width="60" height="40"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                        <state key="normal" title="發佈"/>
+                        <connections>
+                            <action selector="PostPost:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="wOx-sR-3bR"/>
+                        </connections>
+                    </button>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Foj-PM-Ysu">
+                        <rect key="frame" x="8" y="208" width="349" height="350"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    </imageView>
                 </subviews>
                 <constraints>
                     <constraint firstItem="c2u-Oe-zAQ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="Yc8-ie-fpn"/>
@@ -89,7 +98,7 @@
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="PostContent" destination="4Bx-Ev-W7v" id="88z-8K-bZ1"/>
-                <outlet property="PostPhoto" destination="Map-SZ-abE" id="ch4-Tg-Szp"/>
+                <outlet property="PostPhoto" destination="Foj-PM-Ysu" id="KWc-6Y-Bwm"/>
                 <outlet property="profilePhoto" destination="c2u-Oe-zAQ" id="Npx-03-zET"/>
                 <outlet property="userName1" destination="Y1r-Tc-gmS" id="nhw-Zo-ac3"/>
             </connections>
@@ -97,7 +106,6 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="11" width="1440" height="900"/>
         <image name="相機" width="120" height="120"/>
         <image name="阿基師" width="510" height="287"/>
     </resources>

@@ -13,8 +13,8 @@ class MytableViewCellTableViewCell: UITableViewCell, UINavigationControllerDeleg
     @IBOutlet var profilePhoto: UIImageView!
     @IBOutlet var userName1: UILabel!
     @IBOutlet var PostContent: UITextView!
+
     @IBOutlet var PostPhoto: UIImageView!
-    
     
  
     
@@ -29,6 +29,44 @@ class MytableViewCellTableViewCell: UITableViewCell, UINavigationControllerDeleg
         delegate?.present(image, animated: true
             , completion: nil)
     }
+   
+    @IBAction func PostPost(_ sender: Any) {
+      
+        
+        
+        
+        let textString = PostContent.text
+        let url = URL(string: "http://192.168.0.102:8080/api/upload/post" )
+        var request = URLRequest(url: url!)
+        request.setValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type")
+        request.httpMethod = "POST"
+        let postString = "text=" + String(describing: textString)
+        request.httpBody = postString.data(using: .utf8)
+        let task = URLSession.shared.dataTask(with: request) { data, response, error in
+            guard let data = data, error == nil else {                                                 // check for fundamental networking error
+                print("error=\(String(describing: error))")
+                return
+            }
+            
+            if let httpStatus = response as? HTTPURLResponse, httpStatus.statusCode != 200 {           // check for http errors
+                print("statusCode should be 200, but is \(httpStatus.statusCode)")
+                print("response = \(String(describing: response))")
+            }
+            
+            let responseString = String(data: data, encoding: .utf8)
+            print("responseString = \(String(describing: responseString))")
+        }
+        task.resume()
+    
+    }
+    
+    
+    
+    
+    
+    
+    
+    
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         if let image = info[UIImagePickerControllerOriginalImage] as? UIImage
         {
@@ -36,6 +74,13 @@ class MytableViewCellTableViewCell: UITableViewCell, UINavigationControllerDeleg
             delegate?.dismiss(animated: true, completion: nil)
         }
     }
+    
+    
+    
+    
+    
+    
+    
     
     
     
