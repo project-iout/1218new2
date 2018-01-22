@@ -7,7 +7,6 @@
 //
 
 import UIKit
-
 class MytableViewCellTableViewCell: UITableViewCell, UINavigationControllerDelegate, UIImagePickerControllerDelegate,UITextViewDelegate{
 
     @IBOutlet var profilePhoto: UIImageView!
@@ -33,10 +32,10 @@ class MytableViewCellTableViewCell: UITableViewCell, UINavigationControllerDeleg
     @IBAction func PostPost(_ sender: Any) {
       
         
-        
+        print("post post")
         
         let textString = PostContent.text
-        let url = URL(string: "http://192.168.0.102:8080/api/upload/post" )
+        let url = URL(string: "https://www.ioutback.com/api/upload/post" )
         var request = URLRequest(url: url!)
         request.setValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type")
         request.httpMethod = "POST"
@@ -55,9 +54,20 @@ class MytableViewCellTableViewCell: UITableViewCell, UINavigationControllerDeleg
             
             let responseString = String(data: data, encoding: .utf8)
             print("responseString = \(String(describing: responseString))")
+            print("dismiss this controller")
+            if let delegate = self.delegate {
+                print("Back to whole post")
+                DispatchQueue.main.async {
+                    delegate.dismiss(animated: true, completion: nil)
+                }
+                
+                
+                
+            }
+            
         }
         task.resume()
-    
+        
     }
     
     
