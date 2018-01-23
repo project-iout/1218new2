@@ -83,8 +83,8 @@ class MytableViewCellTableViewCell: UITableViewCell, UINavigationControllerDeleg
         
         
     
-        let url = "http://127.0.0.1:8080/api/upload/post" /* your API url */
-//        let url = "https://www.ioutback.com/api/upload/post" /* your API url */
+//        let url = "http://127.0.0.1:8080/api/upload/post" /* your API url */
+        let url = "https://www.ioutback.com/api/upload/post" /* your API url */
         
         let headers: HTTPHeaders = [
             /* "Authorization": "your_access_token",  in case you need authorization header */
