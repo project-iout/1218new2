@@ -92,7 +92,7 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
             var imageArray: [UIImage] = []
             for image in section1ScholImage {
                 let url = URL(string:image as! String)
-             
+            
                 let data = try? Data(contentsOf: url!)
               
                 let image: UIImage = UIImage(data: data!)!
