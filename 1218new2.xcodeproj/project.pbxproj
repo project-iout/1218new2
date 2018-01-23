@@ -157,8 +157,8 @@
 				40ACBA1B1FF102AB00C85A72 /* Post.swift */,
 				4066E880200CA3D700508856 /* PostContentController.swift */,
 				40AC58231FF0F89200B08F6E /* PostCell.swift */,
-				40ACBA1D1FF10EDC00C85A72 /* NewsFeedTableViewController.swift */,
 				4066E882200CB57F00508856 /* MytableViewCellTableViewCell.swift */,
+				40ACBA1D1FF10EDC00C85A72 /* NewsFeedTableViewController.swift */,
 				4066E883200CB57F00508856 /* MytableViewCellTableViewCell.xib */,
 			);
 			path = 1218new2;
