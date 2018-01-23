@@ -32,7 +32,7 @@ class MytableViewCellTableViewCell: UITableViewCell, UINavigationControllerDeleg
     @IBAction func PostPost(_ sender: Any) {
       
         
-        print("post post")
+       
         
         let textString = PostContent.text
         let url = URL(string: "https://www.ioutback.com/api/upload/post" )
