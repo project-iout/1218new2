@@ -11,7 +11,6 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ThreeViewController" customModule="_218new2" customModuleProvider="target">
             <connections>
-                <outlet property="label1" destination="AlK-Ux-8RT" id="jP8-Pt-QtK"/>
                 <outlet property="myWebview1" destination="FKQ-TE-NdO" id="qmt-iv-flc"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -21,10 +20,14 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <webView contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FKQ-TE-NdO">
+                    <rect key="frame" x="0.0" y="20" width="375" height="627"/>
+                    <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                </webView>
                 <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yWo-aY-4ZJ">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                     <items>
-                        <navigationItem title="Title" id="pml-wH-O56">
+                        <navigationItem id="pml-wH-O56">
                             <barButtonItem key="leftBarButtonItem" style="plain" id="9dd-Qc-t7e">
                                 <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="jZ8-XR-8mc">
                                     <rect key="frame" x="16" y="7" width="83" height="30"/>
@@ -48,16 +51,6 @@
                         </navigationItem>
                     </items>
                 </navigationBar>
-                <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FKQ-TE-NdO">
-                    <rect key="frame" x="0.0" y="44" width="375" height="603"/>
-                    <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                </webView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AlK-Ux-8RT">
-                    <rect key="frame" x="0.0" y="646" width="375" height="21"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <nil key="textColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
@@ -65,10 +58,7 @@
                 <constraint firstItem="FKQ-TE-NdO" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="517-V6-gW2"/>
                 <constraint firstItem="FKQ-TE-NdO" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Cs5-S6-nRO"/>
                 <constraint firstItem="FKQ-TE-NdO" firstAttribute="top" secondItem="yWo-aY-4ZJ" secondAttribute="bottom" id="D5R-g4-2z7"/>
-                <constraint firstItem="AlK-Ux-8RT" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="DN8-hy-8w4"/>
-                <constraint firstItem="FKQ-TE-NdO" firstAttribute="leading" secondItem="AlK-Ux-8RT" secondAttribute="leading" id="Fd6-KK-sMG"/>
                 <constraint firstAttribute="bottom" secondItem="FKQ-TE-NdO" secondAttribute="bottom" constant="20" symbolic="YES" id="M6R-h0-ffb"/>
-                <constraint firstItem="FKQ-TE-NdO" firstAttribute="trailing" secondItem="AlK-Ux-8RT" secondAttribute="trailing" id="R9H-wa-fvM"/>
                 <constraint firstItem="yWo-aY-4ZJ" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="ZCt-Fn-ZlA"/>
                 <constraint firstItem="FKQ-TE-NdO" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="c5H-NF-cYy"/>
                 <constraint firstItem="FKQ-TE-NdO" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="ecM-8m-DnK"/>

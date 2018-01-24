@@ -27,7 +27,7 @@ class ThreeViewController: UIViewController {
             let urlObject = URL(string: url)
             myWebview1.loadRequest(URLRequest(url: urlObject!))
         }
-        label1.text = "第"+String(myValue1)+"張圖片:"
+//        label1.text = "第"+String(myValue1)+"張圖片:"
         // Do any additional setup after loading the view.
     }
 

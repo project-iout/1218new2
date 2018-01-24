@@ -29,7 +29,7 @@ class TwoViewController: UIViewController {
         
         
         
-        label1.text = "第"+String(myValue)+"張圖:"
+//        label1.text = "第"+String(myValue)+"張圖:"
         // Do any additional setup after loading the view.
     }
 

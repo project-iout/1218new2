@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13770" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13770"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -32,18 +32,12 @@
                             <outlet property="delegate" destination="-1" id="LWu-2k-apd"/>
                         </connections>
                     </collectionView>
-                    <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="4" translatesAutoresizingMaskIntoConstraints="NO" id="ujb-5d-zcA">
-                        <rect key="frame" x="-2" y="13" width="55" height="37"/>
-                        <color key="pageIndicatorTintColor" white="0.69718424479999996" alpha="1" colorSpace="calibratedWhite"/>
-                    </pageControl>
                 </subviews>
             </view>
             <constraints>
                 <constraint firstAttribute="bottom" secondItem="PcX-oh-luG" secondAttribute="bottom" id="4KB-8E-i52"/>
                 <constraint firstItem="PcX-oh-luG" firstAttribute="top" secondItem="8CV-TG-1ya" secondAttribute="top" id="Dn5-cR-R17"/>
                 <constraint firstItem="PcX-oh-luG" firstAttribute="leading" secondItem="8CV-TG-1ya" secondAttribute="leading" id="G0P-N0-8RQ"/>
-                <constraint firstItem="ujb-5d-zcA" firstAttribute="bottom" secondItem="PcX-oh-luG" secondAttribute="bottom" id="l5i-lY-6cQ"/>
-                <constraint firstItem="PcX-oh-luG" firstAttribute="centerX" secondItem="ujb-5d-zcA" secondAttribute="centerX" id="omR-WI-eWQ"/>
                 <constraint firstAttribute="trailing" secondItem="PcX-oh-luG" secondAttribute="trailing" id="s7c-tg-MYC"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="Fpo-6K-Ny2"/>

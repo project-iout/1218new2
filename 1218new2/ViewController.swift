@@ -46,7 +46,7 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
         if indexPath.section == 0 {
             
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "AAAB", for: indexPath) as? MyCollectionViewCell
-                cell?.myCellSize = CGSize(width: 265, height: 180)
+                cell?.myCellSize = CGSize(width: 380, height: 250)
             
             var imageArray: [UIImage] = []
             var myLableNameArray:[String] = []
@@ -88,7 +88,7 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
      
             
             
-            cell?.myCellSize = CGSize(width: 180, height: 160)
+            cell?.myCellSize = CGSize(width: 280, height: 200)
             var imageArray: [UIImage] = []
             for image in section1ScholImage {
                 let url = URL(string:image as! String)
@@ -110,7 +110,7 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
         else if indexPath.section == 2{
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "FFFF", for: indexPath) as?MyCollectionViewCell2
 
-            cell?.myCellSize = CGSize(width: 180, height: 160)
+            cell?.myCellSize = CGSize(width: 280, height: 200)
             cell?.images = [(UIImage(named: "6"))!, (UIImage(named: "7"))!, (UIImage(named: "8"))!, (UIImage(named: "9"))!, (UIImage(named: "10"))!, (UIImage(named: "11"))!, (UIImage(named: "12"))!, (UIImage(named: "13"))!, (UIImage(named: "14"))!]
             return cell!
         }
@@ -148,11 +148,11 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         switch indexPath.section {
         case 0:
-            return CGSize(width: self.view.frame.width, height: 200)
+            return CGSize(width: self.view.frame.width, height: 300)
         case 1:
-            return CGSize(width: self.view.frame.width, height: 150)
+            return CGSize(width: self.view.frame.width, height: 200)
         case 2:
-            return CGSize(width: self.view.frame.width, height: 150)
+            return CGSize(width: self.view.frame.width, height: 200)
         case 3:
             return CGSize(width: self.view.frame.width, height: 150)
         case  4:

@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13770" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13770"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -21,19 +21,13 @@
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1" translatesAutoresizingMaskIntoConstraints="NO" id="m8x-gf-Dat">
                         <rect key="frame" x="15" y="0.0" width="35" height="50"/>
                     </imageView>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K0I-Mu-aTt">
-                        <rect key="frame" x="4" y="0.0" width="46" height="30"/>
-                        <state key="normal" title="Button"/>
-                    </button>
                 </subviews>
             </view>
             <constraints>
-                <constraint firstItem="K0I-Mu-aTt" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="Ff1-gM-SG8"/>
                 <constraint firstItem="m8x-gf-Dat" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="15" id="GFq-c6-f4U"/>
                 <constraint firstAttribute="trailing" secondItem="m8x-gf-Dat" secondAttribute="trailing" id="GeZ-S4-XBn"/>
                 <constraint firstItem="m8x-gf-Dat" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="USb-eT-N5L"/>
                 <constraint firstItem="m8x-gf-Dat" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="15" id="Whh-Rj-oAR"/>
-                <constraint firstAttribute="trailing" secondItem="K0I-Mu-aTt" secondAttribute="trailing" id="b22-sE-kyW"/>
                 <constraint firstItem="m8x-gf-Dat" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="geT-gH-NeM"/>
                 <constraint firstAttribute="bottom" secondItem="m8x-gf-Dat" secondAttribute="bottom" id="hSm-yv-Lfu"/>
                 <constraint firstAttribute="bottom" secondItem="m8x-gf-Dat" secondAttribute="bottom" id="ubH-lK-PTI"/>

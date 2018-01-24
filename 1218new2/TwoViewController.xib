@@ -11,7 +11,6 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TwoViewController" customModule="_218new2" customModuleProvider="target">
             <connections>
-                <outlet property="label1" destination="aOe-xT-rOX" id="9gP-JQ-zPY"/>
                 <outlet property="myWebview" destination="W2B-Q6-U6K" id="4i0-ZA-Qcq"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="Xwp-Ak-BH5"/>
             </connections>
@@ -21,12 +20,6 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aOe-xT-rOX">
-                    <rect key="frame" x="0.0" y="646" width="375" height="21"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <nil key="textColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
                 <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hKb-3r-k9G">
                     <rect key="frame" x="0.0" y="-14" width="375" height="44"/>
                     <items>
@@ -66,15 +59,12 @@
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="W2B-Q6-U6K" firstAttribute="trailing" secondItem="aOe-xT-rOX" secondAttribute="trailing" id="Ddh-rl-nhn"/>
-                <constraint firstItem="W2B-Q6-U6K" firstAttribute="leading" secondItem="aOe-xT-rOX" secondAttribute="leading" id="IbC-Og-F8g"/>
                 <constraint firstItem="W2B-Q6-U6K" firstAttribute="top" secondItem="hKb-3r-k9G" secondAttribute="bottom" id="WJc-hL-4FV"/>
                 <constraint firstItem="W2B-Q6-U6K" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="WPG-7x-Qco"/>
                 <constraint firstItem="W2B-Q6-U6K" firstAttribute="top" secondItem="hKb-3r-k9G" secondAttribute="bottom" id="dfn-yT-MU3"/>
                 <constraint firstItem="W2B-Q6-U6K" firstAttribute="trailing" secondItem="hKb-3r-k9G" secondAttribute="trailing" id="fAI-2X-Byc"/>
                 <constraint firstItem="W2B-Q6-U6K" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="hjj-sW-Iuh"/>
                 <constraint firstItem="W2B-Q6-U6K" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="iIy-2l-3Ws"/>
-                <constraint firstItem="aOe-xT-rOX" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="qxW-AI-7Ay"/>
                 <constraint firstItem="W2B-Q6-U6K" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="rBa-fW-U4w"/>
                 <constraint firstItem="W2B-Q6-U6K" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="sYW-xV-r3I"/>
                 <constraint firstItem="W2B-Q6-U6K" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="tLc-um-WbJ"/>
