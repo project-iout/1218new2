@@ -324,6 +324,8 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
 
 }
 
-
+//第一行 無邊匡,header 大一點 "熱門話題"
+//第幾張圖刪掉
+//BACK刪除
 
 
