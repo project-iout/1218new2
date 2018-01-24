@@ -34,14 +34,13 @@ class MytableViewCellTableViewCell: UITableViewCell, UINavigationControllerDeleg
   
         
         
-        let parameters = [
-            "text": "yalikavak",
-            "images": "istanbul"]
+        let params = [
+            "text": "yalikavak"]
         
         let image = (UIImage(named: "0"))
 //        uiimage 轉data
         let data = UIImagePNGRepresentation(image!)
-        requestWith(imageData: data, parameters: parameters)
+        requestWith(imageData: data, parameters: params)
         
 //        let textString = PostContent.text
 //        let url = URL(string: "https://www.ioutback.com/api/upload/post" )
@@ -84,8 +83,8 @@ class MytableViewCellTableViewCell: UITableViewCell, UINavigationControllerDeleg
         
         
     
-        //let url = "http://192.168.0.102:8080/api/upload/post" /* your API url */
-        let url = "https://www.ioutback.com/api/upload/post?text=TTTTT" /* your API url */
+//        let url = "http://127.0.0.1:8080/api/upload/post" /* your API url */
+        let url = "https://www.ioutback.com/api/upload/post" /* your API url */
         
         let headers: HTTPHeaders = [
             /* "Authorization": "your_access_token",  in case you need authorization header */
@@ -106,7 +105,7 @@ class MytableViewCellTableViewCell: UITableViewCell, UINavigationControllerDeleg
             case .success(let upload, _, _):
                 upload.responseJSON { response in
                     print("Succesfully uploaded")
-                    print(response.value!)
+                    print(response)
                     if let err = response.error{
                         onError?(err)
                         return
