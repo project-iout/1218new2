@@ -63,14 +63,20 @@ class NewsfeedTableViewController : UITableViewController
             let dicItem = item as! NSDictionary
             newPost.caption = dicItem["text"] as! String
             let url = URL(string: dicItem["image"] as! String)
-            let data = try? Data(contentsOf: url!)
-            let image: UIImage = UIImage(data: data!)!
+            if url != nil{
+                let data = try? Data(contentsOf: url!)
+                let image: UIImage = UIImage(data: data!)!
+            newPost.image = image
+            
+            }
+         
+            
             
             newPost.numberOfComments = 2000
             newPost.numberOfLikes = 1
             newPost.numberOfShares = 5
             
-            newPost.image = image
+           
             posts.append(newPost)
             
             if (loadMoreflag == "secondTimeLoad"){

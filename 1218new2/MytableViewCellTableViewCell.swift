@@ -35,7 +35,7 @@ class MytableViewCellTableViewCell: UITableViewCell, UINavigationControllerDeleg
         
         
         let params = [
-            "text": "yalikavak"]
+            "text": String(PostContent.text)]
         
         let image = (UIImage(named: "0"))
 //        uiimage 轉data
