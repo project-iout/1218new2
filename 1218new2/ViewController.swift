@@ -100,13 +100,9 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
                 imageArray.append(image)
             }
             cell?.images = imageArray
-            
-//            cell?.images = [(UIImage(named: "19"))!, (UIImage(named: "21"))!, (UIImage(named: "22"))!, (UIImage(named: "20"))!]
             cell?.insideCollectionView1.reloadData()
             return cell!
         }
-            
-
         else if indexPath.section == 2{
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "FFFF", for: indexPath) as?MyCollectionViewCell2
 
@@ -114,36 +110,19 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
             cell?.images = [(UIImage(named: "6"))!, (UIImage(named: "7"))!, (UIImage(named: "8"))!, (UIImage(named: "9"))!, (UIImage(named: "10"))!, (UIImage(named: "11"))!, (UIImage(named: "12"))!, (UIImage(named: "13"))!, (UIImage(named: "14"))!]
             return cell!
         }
-    
-
-
-
         else if indexPath.section == 3{
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "QQQ", for: indexPath) as? MyCollectionViewCell3
-            
              cell?.myTable.reloadData()
-            
-//            var restaurantName = ["SPAO", "Campus", "Ali", "QB", "AVOS"]
-//            cell?.words = ["SPAO", "Campus", "Ali", "QB", "AVOS"]
             return cell!
         }
-        
         else
         {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "RRR", for: indexPath) as?MyCollectionViewCell4
             
             return cell!
         }
-        
-        
-        
-        
-        
-        
-        
-    }
     
-   
+    }
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         switch indexPath.section {
@@ -181,21 +160,13 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
                 header?.titleLebel.text = "最後一則"
             default:
                 header?.titleLebel.text = ""
-          
             }
-            
-            
-            
-            //test
-            
-           
 //            header?.backgroundColor = .yellow
             header?.titleLebel.textColor = .black
-           
             return header!}
             else{
             let footer  = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "footerId", for: indexPath) as? MyFooterView
-            
+
             switch indexPath.section{
             case 0:
                 footer?.footerTitle.text = "依據師資、校園設備、學生滿意度評比各校"
@@ -210,14 +181,16 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
             default:
                 footer?.footerTitle.text = "沒有設定"
             }
-            
-        
+
+
             footer?.footerTitle.textColor = .gray
 //            footer?.backgroundColor = .green
             return footer!
-        }
         
+        }
+    
     }
+    
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
         return CGSize(width: collectionView.frame.width, height: 30)

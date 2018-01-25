@@ -37,10 +37,6 @@ class MytableViewCellTableViewCell: UITableViewCell, UINavigationControllerDeleg
 //        uiimage controller  轉型成 uiimage 並丟入全域變數"PostImage"
     }
 
-    
-    
-    
-   
     @IBAction func PostPost(_ sender: Any) {
         let params = [
             "text": String(PostContent.text)]
@@ -80,11 +76,8 @@ class MytableViewCellTableViewCell: UITableViewCell, UINavigationControllerDeleg
         //delegate?.dismiss(animated: true, completion: nil)
   
     }
-    
     func requestWith( imageData: Data?, parameters: [String : Any], onCompletion: ((JSON?) -> Void)? = nil, onError: ((Error?) -> Void)? = nil){
         
-        
-    
 //        let url = "http://127.0.0.1:8080/api/upload/post" /* your API url */
         let url = "https://www.ioutback.com/api/upload/post" /* your API url */
         
@@ -117,29 +110,27 @@ class MytableViewCellTableViewCell: UITableViewCell, UINavigationControllerDeleg
             case .failure(let error):
                 print("Error in upload: \(error.localizedDescription)")
                 onError?(error)
-                
-         
-              
-                
         }
     }
     
+       
+
     
     
-    
-    
-    
+        
+        
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        
+        
         if let image = info[UIImagePickerControllerOriginalImage] as? UIImage
         {
+            imageView?.contentMode = .scaleAspectFit
+            imageView?.image = image
             PostPhoto.image = image
             delegate?.dismiss(animated: true, completion: nil)
         }
     }
-    
-    
-    
-    
+
  func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -158,7 +149,6 @@ class MytableViewCellTableViewCell: UITableViewCell, UINavigationControllerDeleg
         {
             super.setSelected(selected, animated: animated)
         }
-    
     
         // Configure the view for the selected state
     }

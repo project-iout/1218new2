@@ -16,11 +16,11 @@ class MyCollectionViewCell: UICollectionViewCell,UICollectionViewDataSource,UICo
     
     @IBOutlet var frViewController: UIView!
     
+    @IBOutlet var cellLabel: UILabel!
     
     
     var images:[UIImage]?{
         didSet{
-            //do something here ,   cell.insideCollectionView.reloadData()
         }
     }
     var myCellSize:CGSize?
@@ -60,18 +60,18 @@ class MyCollectionViewCell: UICollectionViewCell,UICollectionViewDataSource,UICo
         
         switch indexPath.section{
         case 0:
-            print("This item is in the first row")
-    
-    
-            
+            print("This item is in the 111111")
+        case 1:
+            print("This item is in the 222222")
+        case 2:
+            print("This item is in the 333333")
+        case 3:
+            print("This item is in the 4444444")
         default:
-            print("This is wrong")
+            print("This item is in the 555555")
         }
         return true
     }
-    
-    
- 
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
@@ -87,9 +87,6 @@ class MyCollectionViewCell: UICollectionViewCell,UICollectionViewDataSource,UICo
         insideCollectionView.register(UINib(nibName: "ImageCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "displayedImageCell")
         insideCollectionView.delegate  = self
         insideCollectionView.dataSource = self
-        
-       
-        
     }
 
 }
