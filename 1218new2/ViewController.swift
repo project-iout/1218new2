@@ -168,9 +168,9 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
         if kind == UICollectionElementKindSectionHeader {
             let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "headerId", for: indexPath) as? MyHeaderView
             switch indexPath.section{
-            case 0:
-                header?.titleLebel.text = "熱門景色"
-                header?.titleLebel.font = UIFont.systemFont(ofSize: 17)
+//            case 0:
+//                header?.titleLebel.text = "熱門景色"
+//                header?.titleLebel.font = UIFont.systemFont(ofSize: 17)
             case 1:
                 header?.titleLebel.text = "火線話題"
             case 2:
@@ -180,7 +180,7 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
             case 4:
                 header?.titleLebel.text = "最後一則"
             default:
-                header?.titleLebel.text = "沒有設定"
+                header?.titleLebel.text = ""
           
             }
             
@@ -324,8 +324,5 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
 
 }
 
-//第一行 無邊匡,header 大一點 "熱門話題"
-//第幾張圖刪掉
-//BACK刪除
 
 

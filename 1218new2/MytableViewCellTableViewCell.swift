@@ -10,12 +10,16 @@ import UIKit
 import Alamofire
 import SwiftyJSON
 
+
+
+
 class MytableViewCellTableViewCell: UITableViewCell, UINavigationControllerDelegate, UIImagePickerControllerDelegate,UITextViewDelegate{
 
+    var PostImage = UIImage()
+    
     @IBOutlet var profilePhoto: UIImageView!
     @IBOutlet var userName1: UILabel!
     @IBOutlet var PostContent: UITextView!
-
     @IBOutlet var PostPhoto: UIImageView!
  
     var delegate:UIViewController?
@@ -28,18 +32,22 @@ class MytableViewCellTableViewCell: UITableViewCell, UINavigationControllerDeleg
         image.allowsEditing = false
         delegate?.present(image, animated: true
             , completion: nil)
+
+        
+//        uiimage controller  轉型成 uiimage 並丟入全域變數"PostImage"
     }
+
+    
+    
+    
    
     @IBAction func PostPost(_ sender: Any) {
-  
-        
-        
         let params = [
             "text": String(PostContent.text)]
         
-        let image = (UIImage(named: "0"))
-//        uiimage 轉data
-        let data = UIImagePNGRepresentation(image!)
+        let image = PostImage
+//        使用全域變數的"PostImage" 並丟入"data"
+        let data = UIImagePNGRepresentation(image)
         requestWith(imageData: data, parameters: params)
         
 //        let textString = PostContent.text
@@ -54,12 +62,10 @@ class MytableViewCellTableViewCell: UITableViewCell, UINavigationControllerDeleg
 //                print("error=\(String(describing: error))")
 //                return
 //            }
-//
 //            if let httpStatus = response as? HTTPURLResponse, httpStatus.statusCode != 200 {           // check for http errors
 //                print("statusCode should be 200, but is \(httpStatus.statusCode)")
 //                print("response = \(String(describing: response))")
 //            }
-//
 //            let responseString = String(data: data, encoding: .utf8)
 //            print("responseString = \(String(describing: responseString))")
 //            print("dismiss this controller")
@@ -68,11 +74,7 @@ class MytableViewCellTableViewCell: UITableViewCell, UINavigationControllerDeleg
 //                DispatchQueue.main.async {
 //                    //delegate.dismiss(animated: true, completion: nil)
 //                }
-//
-//
-//
 //            }
-//
 //        }
 //        task.resume()
         //delegate?.dismiss(animated: true, completion: nil)

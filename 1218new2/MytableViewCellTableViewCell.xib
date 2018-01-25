@@ -84,15 +84,15 @@
                             <action selector="PostPost:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="wOx-sR-3bR"/>
                         </connections>
                     </button>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Foj-PM-Ysu">
-                        <rect key="frame" x="8" y="208" width="349" height="349"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                    </imageView>
                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yoE-T8-ics">
                         <rect key="frame" x="0.0" y="3" width="361" height="2"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                     </view>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="1" translatesAutoresizingMaskIntoConstraints="NO" id="Foj-PM-Ysu">
+                        <rect key="frame" x="6" y="208" width="349" height="349"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                    </imageView>
                 </subviews>
                 <constraints>
                     <constraint firstItem="c2u-Oe-zAQ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="Yc8-ie-fpn"/>
@@ -110,6 +110,7 @@
         </tableViewCell>
     </objects>
     <resources>
+        <image name="1" width="309" height="163"/>
         <image name="相機" width="120" height="120"/>
         <image name="阿基師" width="510" height="287"/>
     </resources>
