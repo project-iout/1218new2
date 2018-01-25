@@ -46,7 +46,7 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
         if indexPath.section == 0 {
             
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "AAAB", for: indexPath) as? MyCollectionViewCell
-                cell?.myCellSize = CGSize(width: 380, height: 250)
+                cell?.myCellSize = CGSize(width: 360, height: 270)
             
             var imageArray: [UIImage] = []
             var myLableNameArray:[String] = []
@@ -88,7 +88,7 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
      
             
             
-            cell?.myCellSize = CGSize(width: 280, height: 200)
+            cell?.myCellSize = CGSize(width: 260, height: 180)
             var imageArray: [UIImage] = []
             for image in section1ScholImage {
                 let url = URL(string:image as! String)
@@ -106,7 +106,7 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
         else if indexPath.section == 2{
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "FFFF", for: indexPath) as?MyCollectionViewCell2
 
-            cell?.myCellSize = CGSize(width: 280, height: 200)
+            cell?.myCellSize = CGSize(width: 260, height: 180)
             cell?.images = [(UIImage(named: "6"))!, (UIImage(named: "7"))!, (UIImage(named: "8"))!, (UIImage(named: "9"))!, (UIImage(named: "10"))!, (UIImage(named: "11"))!, (UIImage(named: "12"))!, (UIImage(named: "13"))!, (UIImage(named: "14"))!]
             return cell!
         }
@@ -127,7 +127,7 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         switch indexPath.section {
         case 0:
-            return CGSize(width: self.view.frame.width, height: 300)
+            return CGSize(width: self.view.frame.width, height: 270)
         case 1:
             return CGSize(width: self.view.frame.width, height: 200)
         case 2:
@@ -151,7 +151,7 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
 //                header?.titleLebel.text = "熱門景色"
 //                header?.titleLebel.font = UIFont.systemFont(ofSize: 17)
             case 1:
-                header?.titleLebel.text = "火線話題"
+                header?.titleLebel.text = "最新話題"
             case 2:
                 header?.titleLebel.text = "精選學校"
             case 3:
@@ -168,18 +168,18 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
             let footer  = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "footerId", for: indexPath) as? MyFooterView
 
             switch indexPath.section{
-            case 0:
-                footer?.footerTitle.text = "依據師資、校園設備、學生滿意度評比各校"
-            case 1:
-                footer?.footerTitle.text = "內文1"
-            case 2:
-                footer?.footerTitle.text = "內文2"
-            case 3:
-                footer?.footerTitle.text = "商品內容"
-            case 4:
-                footer?.footerTitle.text = "此頁見底"
+//            case 0:
+//                footer?.footerTitle.text = "依據師資、校園設備、學生滿意度評比各校"
+//            case 1:
+//                footer?.footerTitle.text = "內文1"
+//            case 2:
+//                footer?.footerTitle.text = "內文2"
+//            case 3:
+//                footer?.footerTitle.text = "商品內容"
+//            case 4:
+//                footer?.footerTitle.text = "此頁見底"
             default:
-                footer?.footerTitle.text = "沒有設定"
+                footer?.footerTitle.text = " "
             }
 
 
@@ -194,10 +194,21 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
         return CGSize(width: collectionView.frame.width, height: 30)
+
+    
     }
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForFooterInSection section: Int) -> CGSize {
-        return CGSize(width: collectionView.frame.width, height: 20)
+        return CGSize(width: collectionView.frame.width, height: 0)
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
