@@ -59,8 +59,6 @@ class MytableViewCellTableViewCell: UITableViewCell, UINavigationControllerDeleg
 //    {
 //        super.setSelected(selected, animated: animated)
 //    }
-//
-
     @IBAction func postCamera(_ sender: Any) {
         print("pick image")
     let image = UIImagePickerController()
@@ -69,22 +67,15 @@ class MytableViewCellTableViewCell: UITableViewCell, UINavigationControllerDeleg
         image.allowsEditing = false
         delegate?.present(image, animated: true
             , completion: nil)
-
-        
-//        uiimage controller  轉型成 uiimage 並丟入全域變數"PostImage"
     }
 
     @IBAction func PostPost(_ sender: Any) {
         let params = [
             "text": String(PostContent.text)]
-        
         let image = postImage
-//        使用全域變數的"PostImage" 並丟入"data"
         let data = UIImagePNGRepresentation(image)
         requestWith(imageData: data, parameters: params)
-   
         delegate?.dismiss(animated: true, completion: nil)
-        
     }
         func requestWith( imageData: Data?, parameters: [String : Any], onCompletion: ((JSON?) -> Void)? = nil, onError: ((Error?) -> Void)? = nil){
             
@@ -95,16 +86,13 @@ class MytableViewCellTableViewCell: UITableViewCell, UINavigationControllerDeleg
                 /* "Authorization": "your_access_token",  in case you need authorization header */
                 "Content-type": "multipart/form-data"
             ]
-            
             Alamofire.upload(multipartFormData: { (multipartFormData) in
                 for (key, value) in parameters {
                     multipartFormData.append("\(value)".data(using: String.Encoding.utf8)!, withName: key as String)
                 }
-                
                 if let data = imageData{
                     multipartFormData.append(data, withName: "image", fileName: "image.png", mimeType: "image/png")
                 }
-                
             }, usingThreshold: UInt64.init(), to: url, method: .post, headers: headers) { (result) in
                 switch result{
                 case .success(let upload, _, _):

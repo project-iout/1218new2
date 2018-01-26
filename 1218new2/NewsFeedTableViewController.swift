@@ -10,7 +10,7 @@ import UIKit
 
 class NewsfeedTableViewController : UITableViewController
 {
-    
+    var refresh = UIRefreshControl()
     var pageNumber: Int = 1
     var searchController: UISearchController!
     var posts: [Post]?
@@ -24,6 +24,10 @@ class NewsfeedTableViewController : UITableViewController
         // dynamic table view cell height
         tableView.estimatedRowHeight = tableView.rowHeight
         tableView.rowHeight = UITableViewAutomaticDimension
+        
+        refresh.tintColor = UIColor.green
+        self.tableView.addSubview(refresh)
+
     }
     
     func fetchPosts()
@@ -111,7 +115,7 @@ class NewsfeedTableViewController : UITableViewController
 
 // MARK: - UITableViewDataSource
 
-extension NewsfeedTableViewController
+    extension NewsfeedTableViewController
 {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if let posts = posts {
@@ -150,6 +154,10 @@ extension NewsfeedTableViewController
        
     }
     
+        override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+            refresh.endRefreshing()
+        }
+        
     func loadMoreData(_ pageNumber: Int ){
         
         let urlString = "https://www.ioutback.com/api/wall/more/" + String(pageNumber)
@@ -182,41 +190,10 @@ extension NewsfeedTableViewController
             }.resume()
     }
     
-    
-//
-//    func dataFetched1(_ results1:[String]){
-//        print("testt11111")
-//
-//        for item1 in results1{
-//            print("testt222222")
-//            //            從results這個陣列裡取出item
-//            var newPost = Post()
-//            //            宣告一個名為newPost的Post物件,這個物件會以我在post.swift宣告的struct為基本架構 根據輸入的值而改變其內容
-//            newPost.caption = item1
-//            //            將取得的item存在名為newPost的Post物件
-//            newPost.numberOfComments = 2000
-//            newPost.numberOfLikes = 1
-//            newPost.numberOfShares = 5
-//            newPost.image = UIImage(named: "2")
-////            posts.append(newPost)
-//            self.posts?.append(newPost)
-//        }
-//
-//
-//        //        將local var 的post 丟回gobal var 的post
-//        DispatchQueue.main.async {
-//            //          將畫面變動交給主要執行緒
-//            self.tableView.reloadData()
-//            //            重新run下面的方法
-//        }
-//
-//    }
-    
-    
-    
+
     
 }
 
-    
+
     
      
