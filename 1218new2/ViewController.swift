@@ -147,9 +147,10 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
         if kind == UICollectionElementKindSectionHeader {
             let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "headerId", for: indexPath) as? MyHeaderView
             switch indexPath.section{
-//            case 0:
+            case 0:
 //                header?.titleLebel.text = "熱門景色"
-//                header?.titleLebel.font = UIFont.systemFont(ofSize: 17)
+//                header?.titleLebel.font = UIFont.systemFont(ofSize: 0)
+                header?.titleLebel.isHidden = true
             case 1:
                 header?.titleLebel.text = "最新話題"
             case 2:
@@ -193,16 +194,14 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
     
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
-        return CGSize(width: collectionView.frame.width, height: 30)
-
-    
+        if section == 0 {
+               return CGSize(width: collectionView.frame.width, height: 0)
+        }
+        else {
+            return CGSize(width: collectionView.frame.width, height: 30)
+            
+        }
     }
-    
-    
-    
-    
-    
-    
     
     
     
