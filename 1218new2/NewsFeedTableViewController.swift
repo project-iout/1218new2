@@ -25,12 +25,22 @@ class NewsfeedTableViewController : UITableViewController
         tableView.estimatedRowHeight = tableView.rowHeight
         tableView.rowHeight = UITableViewAutomaticDimension
         
-    
-
+       
         refresh.tintColor = UIColor.blue
-    
+        refresh.attributedTitle = NSAttributedString()
+        
+        refresh.addTarget(self, action:  #selector(self.handleRefresh(_:)), for: UIControlEvents.valueChanged)
+        
         self.tableView.addSubview(self.refresh)
+     
     }
+    
+    @objc func handleRefresh(_ refreshControl: UIRefreshControl) {
+    
+        self.tableView.reloadData()
+        refreshControl.endRefreshing()
+    }
+    
     
     
     func fetchPosts()
@@ -77,8 +87,6 @@ class NewsfeedTableViewController : UITableViewController
             
             }
          
-            
-            
             newPost.numberOfComments = 2000
             newPost.numberOfLikes = 1
             newPost.numberOfShares = 5
@@ -116,20 +124,21 @@ class NewsfeedTableViewController : UITableViewController
         }
         }
 
-    extension NewsfeedTableViewController
-        {
+    extension NewsfeedTableViewController{
+        
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if let posts = posts {
             return posts.count
         } else {
             return 0
         }
-        }
+    }
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "PostCell", for: indexPath) as! PostCell
         cell.post = self.posts?[indexPath.row]
         return cell
-        }
+    }
+        
     override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         let lastItem: Int = (posts?.count)!
         
@@ -141,15 +150,21 @@ class NewsfeedTableViewController : UITableViewController
             loadMoreData(pageNumber)
             pageNumber = pageNumber+1
         }
+        else{
+            fetchPosts()
         }
+    }
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         self.refreshControl?.endRefreshing()
 //        return posts?.count
         refresh.endRefreshing()
         }
+        
+        
      func populate()
         {
          loadMoreData(pageNumber)
+           
         }
     func loadMoreData(_ pageNumber: Int ){
         let urlString = "https://www.ioutback.com/api/wall/more/" + String(pageNumber)
@@ -184,6 +199,7 @@ class NewsfeedTableViewController : UITableViewController
                 print("test0000000")
         }
             .resume()
+        refreshControl?.endRefreshing()
           tableView.reloadData()
         }
         }
