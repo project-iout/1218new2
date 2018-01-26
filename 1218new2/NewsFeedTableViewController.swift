@@ -25,10 +25,13 @@ class NewsfeedTableViewController : UITableViewController
         tableView.estimatedRowHeight = tableView.rowHeight
         tableView.rowHeight = UITableViewAutomaticDimension
         
-        refresh.tintColor = UIColor.green
-        self.tableView.addSubview(refresh)
+    
 
+        refresh.tintColor = UIColor.blue
+    
+        self.tableView.addSubview(self.refresh)
     }
+    
     
     func fetchPosts()
     {
@@ -56,7 +59,7 @@ class NewsfeedTableViewController : UITableViewController
                 }
             }
             }.resume()
-    }
+            }
     func dataFetched(_ results:NSArray , loadMoreflag:String){
         var posts = [Post]()
 //        宣告一個名稱為posts的變數 並塞入post陣列架構, () 代表這個post可以是任意的數量
@@ -99,9 +102,9 @@ class NewsfeedTableViewController : UITableViewController
             self.tableView.reloadData()
         }
         
-    }
+        }
     func setupSearchController()
-    {
+        {
         searchController = UISearchController(searchResultsController: nil)
         
         searchController.hidesNavigationBarDuringPresentation = false
@@ -110,33 +113,23 @@ class NewsfeedTableViewController : UITableViewController
         
         navigationItem.titleView = searchController.searchBar
         definesPresentationContext = true
-    }
-}
-
-// MARK: - UITableViewDataSource
+        }
+        }
 
     extension NewsfeedTableViewController
-{
+        {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if let posts = posts {
             return posts.count
         } else {
             return 0
         }
-    }
-  
-    
-    
+        }
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "PostCell", for: indexPath) as! PostCell
-        
         cell.post = self.posts?[indexPath.row]
-        
         return cell
-        
-    }
-    
-    
+        }
     override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         let lastItem: Int = (posts?.count)!
         
@@ -145,54 +138,56 @@ class NewsfeedTableViewController : UITableViewController
         
         if indexPath.row == lastItem - 2
         {
-   
-            
             loadMoreData(pageNumber)
             pageNumber = pageNumber+1
-
         }
-       
-    }
-    
-        override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-            refresh.endRefreshing()
         }
-        
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.refreshControl?.endRefreshing()
+//        return posts?.count
+        refresh.endRefreshing()
+        }
+     func populate()
+        {
+         loadMoreData(pageNumber)
+        }
     func loadMoreData(_ pageNumber: Int ){
-        
         let urlString = "https://www.ioutback.com/api/wall/more/" + String(pageNumber)
         let url = URL(string: urlString)
         //        宣告一個url 並存入網址string
         URLSession.shared.dataTask(with: url!){(data, response, error) in
-            if error != nil {
+        if error != nil {
                 print(error as Any)
-            } else {
-                do{
-                    let parsedData = try JSONSerialization.jsonObject(with: data!) as! [String:Any]
-                    //                    宣告parsedData將data轉型為string array
-                    let results1 = parsedData["wall"] as! NSArray
-                    //                宣告postArray 將取出來的陣列wall 轉型為NSarray
-                    let dicItem = results1[0] as! NSDictionary
-                    if (dicItem["status"] as! String != "stop" ){
-//                  這兩行表示 如果array中第一筆元素 有一個key 叫做status, value叫做 stop 則執行下一行
-//                    when result1 is not equal to [0], than execute the command below, if equal, break the loop
-                        self.dataFetched(results1 , loadMoreflag: "secondTimeLoad")
-                    }
-                    else {
-                        print("This is the end!")
-                    }
-                    
-                } catch let error as NSError {
-                    print(error)
-                }
             }
-            print("test0000000")
-            }.resume()
-    }
-    
+        else {
+            do{
+                let parsedData = try JSONSerialization.jsonObject(with: data!) as! [String:Any]
+//                    宣告parsedData將data轉型為string array
+                let results1 = parsedData["wall"] as! NSArray
+//                宣告postArray 將取出來的陣列wall 轉型為NSarray
+                let dicItem = results1[0] as! NSDictionary
+                if (dicItem["status"] as! String != "stop" ){
+//                  這兩行表示 如果array中第一筆元素 有一個key 叫做status, value叫做 stop 則執行下一行
+//                    when result1 is not equal to [0], than execute the command below, if equal, break the
+                self.dataFetched(results1 , loadMoreflag: "secondTimeLoad")
+        }
+                    
+                else {
+                    
+                print("This is the end!")
+        }
+                    
+        } catch let error as NSError {
+                print(error)
+        }
+        }
+                print("test0000000")
+        }
+            .resume()
+          tableView.reloadData()
+        }
+        }
 
-    
-}
 
 
     
