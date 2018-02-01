@@ -13,7 +13,9 @@ class ImageCollectionViewCell: UICollectionViewCell {
  
     @IBOutlet var displayedImage: UIImageView!
     override func awakeFromNib() {
+        
         super.awakeFromNib()
  
+        
     }
 }
