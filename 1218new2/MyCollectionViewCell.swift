@@ -10,6 +10,7 @@ import UIKit
 
 class MyCollectionViewCell: UICollectionViewCell,UICollectionViewDataSource,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout {
     
+    
     var myViewController: ViewController!
 
     @IBOutlet weak var pageControl: UIPageControl!
@@ -17,6 +18,9 @@ class MyCollectionViewCell: UICollectionViewCell,UICollectionViewDataSource,UICo
     @IBOutlet var frViewController: UIView!
     
     @IBOutlet var cellLabel: UILabel!
+    
+    @IBOutlet var frSchool: [UILabel]!
+    
     
     
     var images:[UIImage]?{
@@ -75,9 +79,10 @@ class MyCollectionViewCell: UICollectionViewCell,UICollectionViewDataSource,UICo
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
-        
-        print("my width = \(myCellSize!.width), my height=\(myCellSize!.height)")
-        return self.myCellSize!
+        return CGSize(width: 360, height: 185)
+//        print("my width = \(myCellSize!.width), my height=\(myCellSize!.height)")
+//        return self.myCellSize!
+       
     }
     
     @IBOutlet var insideCollectionView: UICollectionView!

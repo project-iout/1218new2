@@ -58,8 +58,11 @@ class MyCollectionViewCell1: UICollectionViewCell,UICollectionViewDataSource,UIC
     
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-          print("my width = \(myCellSize?.width), my height=\(myCellSize?.height)")
-        return self.myCellSize!
+             return CGSize(width: 180, height: 130)
+       
+        
+//        print("my width = \(myCellSize?.width), my height=\(myCellSize?.height)")
+//        return self.myCellSize!
     }
 
     @IBOutlet var insideCollectionView1: UICollectionView!

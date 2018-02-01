@@ -28,9 +28,7 @@ class NewsfeedTableViewController : UITableViewController
        
         refresh.tintColor = UIColor.blue
         refresh.attributedTitle = NSAttributedString()
-        
         refresh.addTarget(self, action:  #selector(self.handleRefresh(_:)), for: UIControlEvents.valueChanged)
-        
         self.tableView.addSubview(self.refresh)
      
     }

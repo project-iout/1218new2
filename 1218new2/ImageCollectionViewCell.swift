@@ -16,5 +16,4 @@ class ImageCollectionViewCell: UICollectionViewCell {
         super.awakeFromNib()
  
     }
-
 }

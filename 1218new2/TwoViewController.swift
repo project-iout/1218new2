@@ -11,14 +11,20 @@ import UIKit
 class TwoViewController: UIViewController {
 
     var myValue:Int!
-
+    
+    
+    
+    
     @IBOutlet weak var label1: UILabel!
     
     @IBOutlet var myWebview: UIWebView!
     @IBAction func nextButton(_ sender: UIButton) {
     }
     @IBAction func backButton(_ sender: UIButton) {
+    
         self.dismiss(animated: true, completion: nil)
+    
+    
     }
     
     override func viewDidLoad() {
@@ -26,7 +32,7 @@ class TwoViewController: UIViewController {
     
         let url = URL(string: "https://www.ioutback.com")
         myWebview.loadRequest(URLRequest(url: url!))
-        
+    
     
 
     }

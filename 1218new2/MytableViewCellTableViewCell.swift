@@ -54,11 +54,7 @@ class MytableViewCellTableViewCell: UITableViewCell, UINavigationControllerDeleg
         textView.text = nil
         
     }
-//
-//    func setSelected(selected: Bool, animated: Bool)
-//    {
-//        super.setSelected(selected, animated: animated)
-//    }
+
     @IBAction func postCamera(_ sender: Any) {
         print("pick image")
     let image = UIImagePickerController()

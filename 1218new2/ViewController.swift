@@ -71,11 +71,6 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
             
             cell?.lableName = myLableNameArray
 
-//
-//            let navigationController = UINavigationController(rootViewController: self)
-//
-//            cell?.navigationController = navigationController
-//
             return cell!
         }
 
